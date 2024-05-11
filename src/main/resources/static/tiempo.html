@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        #weatherData {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+        .weather-item {
+            margin-bottom: 15px;
+        }
+        .weather-item label {
+            font-weight: bold;
+        }
+        .weather-forecast {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .forecast-item {
+            flex-basis: calc(33.33% - 10px);
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+        }
+        .forecast-item h3 {
+            margin-top: 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<h1>Weather App</h1>
+<div id="weatherData">
+    <div class="weather-item">
+        <label>City:</label>
+        <span id="city"></span>
+    </div>
+    <div class="weather-item">
+        <label>Temperature:</label>
+        <span id="temperature"></span>
+    </div>
+    <div class="weather-item">
+        <label>Humidity:</label>
+        <span id="humidity"></span>
+    </div>
+    <div class="weather-item">
+        <label>Weather:</label>
+        <span id="weather"></span>
+    </div>
+    <div class="weather-forecast">
+        <div class="forecast-item">
+            <h3>Day 1</h3>
+            <p><strong>Temperature:</strong> <span id="day1Temp"></span></p>
+            <p><strong>Weather:</strong> <span id="day1Weather"></span></p>
+        </div>
+        <div class="forecast-item">
+            <h3>Day 2</h3>
+            <p><strong>Temperature:</strong> <span id="day2Temp"></span></p>
+            <p><strong>Weather:</strong> <span id="day2Weather"></span></p>
+        </div>
+        <div class="forecast-item">
+            <h3>Day 3</h3>
+            <p><strong>Temperature:</strong> <span id="day3Temp"></span></p>
+            <p><strong>Weather:</strong> <span id="day3Weather"></span></p>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src=js/weather.js"></script>
+</body>
+</html>
+
