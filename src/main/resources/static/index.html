@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"  >
+<html lang="en">
 
 <head>
 
@@ -29,24 +29,21 @@
 
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
+        <hr class="sidebar-divider">
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-
-            <div class="sidebar-brand-text mx-3" style="margin-top: 10px; margin-bottom: 10px;">Mancomunidad de los
-                Canales del Taibilla
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html" style="margin-top: 20px; margin-bottom: 20px;">
+            <div class="sidebar-brand-text mx-3">
+                Mancomunidad de los Canales del Taibilla
             </div>
         </a>
 
+        <hr class="sidebar-divider">
 
-        <!-- Divider -->
-        <hr class="sidebar-divider my-0">
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
 
             <div class="sidebar-brand-text mx-3">Pluviometria</div>
         </a>
-        <!-- Divider -->
-        <hr class="sidebar-divider my-0">
+
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
             <a class="nav-link" href="index.html">
@@ -59,9 +56,17 @@
 
         <!-- Heading -->
         <div class="sidebar-heading">
-            Interface
+            Gestion de Usuarios
         </div>
-
+        <li class="nav-item">
+            <a class="nav-link" href="registeruser.html">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Nuevo Usuario</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="usuarios.html">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Listado de Usuarios</span></a>
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -102,7 +107,7 @@
 
         <!-- Heading -->
         <div class="sidebar-heading">
-            Addons
+            Gestión Pluviometria
         </div>
 
         <!-- Nav Item - Pages Collapse Menu -->
@@ -320,29 +325,18 @@
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="txt-email-usuario"></span>
                             <img class="img-profile rounded-circle"
                                  src="img/undraw_profile.svg">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                              aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="#">
-                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Profile
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Settings
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Activity Log
-                            </a>
+
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Logout
+                                Cerrar Sesión
                             </a>
                         </div>
                     </li>
@@ -354,39 +348,72 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
-                <table>
+                <table style="margin-left: auto; margin-right: auto;">
                     <tr>
-                        <td><a>Elige Un Municipio</a></td>
+                        <td colspan="3" align="center"><b>Elige Un Municipio</b></td>
                     </tr>
                     <tr>
-                        <td><a class="btn btn-primary btn-user btn-block" onclick="loadIframe('murcia-id30030')">Murcia</a></td>
-                        <td><a class="btn btn-primary btn-user btn-block" onclick="loadIframe('cartagena-id30016')">Cartagena</a></td>
-                        <td><a class="btn btn-primary btn-user btn-block" onclick="loadIframe('alacant-alicante-id03014?')">Alicante</a></td>
+                        <td><a class="btn btn-primary btn-user btn-block"
+                               onclick="loadIframe('murcia-id30030')">Murcia</a></td>
+                        <td><a class="btn btn-primary btn-user btn-block" onclick="loadIframe('cartagena-id30016')">Cartagena</a>
+                        </td>
+                        <td><a class="btn btn-primary btn-user btn-block"
+                               onclick="loadIframe('alacant-alicante-id03014?')">Alicante</a></td>
                     </tr>
                     <tr>
-                        <td><a class="btn btn-primary btn-user btn-block" onclick="loadIframe('bullas-id30012')">Bullas</a></td>
-                        <td><a class="btn btn-primary btn-user btn-block" onclick="loadIframe('nerpio-id02055?')">Nerpio</a></td>
-                        <td><a class="btn btn-primary btn-user btn-block" onclick="loadIframe('register')">Register Account</a></td>
+                        <td><a class="btn btn-primary btn-user btn-block"
+                               onclick="loadIframe('bullas-id30012')">Bullas</a></td>
+                        <td><a class="btn btn-primary btn-user btn-block"
+                               onclick="loadIframe('nerpio-id02055?')">Nerpio</a></td>
+                        <td><a class="btn btn-primary btn-user btn-block" onclick="loadIframe('register')">Orihuela</a></td>
                     </tr>
-                    <tr>
-                        <td><a class="btn btn-primary btn-user btn-block" onclick="loadIframe('register')">Register Account</a></td>
-                        <td><a class="btn btn-primary btn-user btn-block" onclick="loadIframe('register')">Register Account</a></td>
-                        <td><a class="btn btn-primary btn-user btn-block" onclick="loadIframe('register')">Register Account</a></td>
-                    </tr>
+
                 </table>
 
                 <hr> <!-- Línea separadora -->
 
-                <iframe name="iframe_aemet_id33044" width="100%" height="100%" tabindex="0" id="iframe_aemet_id33044"
+                <iframe name="iframe_aemet_id33044" width="100%" height="200px" tabindex="0" id="iframe_aemet_id33044"
                         frameborder="0" scrolling="no"></iframe>
             </div>
 
             <script>
+
+
+
                 function loadIframe(municipio) {
                     var iframe = document.getElementById('iframe_aemet_id33044');
                     iframe.src = 'https://www.aemet.es/es/eltiempo/prediccion/municipios/mostrarwidget/' + municipio;
+
+                    // Actualizar el número de registros
+                    var numeroRegistros = obtenerNumeroRegistros();
+                    var elementoNumeroRegistros = document.getElementById('numeroRegistros');
+                    if (elementoNumeroRegistros) {
+                        elementoNumeroRegistros.textContent = numeroRegistros;
+                    }
                 }
+                    window.onload = function () {
+                        loadIframe('murcia-id30030');
+                    }
             </script>
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Total Registros</div>
+                                <div id="numeroRegistros" class="h5 mb-0 font-weight-bold text-gray-800">Cargando...</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
 
             <!-- /.container-fluid -->
 
@@ -397,7 +424,7 @@
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Your Website 2021</span>
+                    <span>Jose Luis Rodriguez Rodriguez - Proyecto DAM</span>
                 </div>
             </div>
         </footer>
@@ -453,6 +480,9 @@
 
 <script src="//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js"></script>
 <script src="//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="js/pluviometros.js"></script>
 
 </body>
 
