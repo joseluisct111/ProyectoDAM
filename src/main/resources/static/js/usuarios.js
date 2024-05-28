@@ -2,12 +2,12 @@
 $(document).ready(function () {
     cargarUsuarios()
     $('#usuarios').DataTable();
-    actualizarEmailUsuario();
+    //actualizarEmailUsuario();
 });
 
-function actualizarEmailUsuario() {
-    document.getElementById('txt-email-usuario').outerHTML = localStorage.email;
-}
+//function actualizarEmailUsuario() {
+//    document.getElementById('txt-email-usuario').outerHTML = localStorage.email;
+//}
 
 async function cargarPluviometros() {
     const request = await fetch('api/pluviometros', {
@@ -37,7 +37,7 @@ async function cargarUsuarios() {
 
     let listadoUsuariosHtml = '';
     for (let usuario of usuarios) {
-        let botonEliminar1 = '<a href="#" onclick="eliminarUsuario(' + usuario.id + ')" class="btn-danger btn-circle btn-sm"> <i class="fas fa-trash"></i> </a>'
+        let botonEliminar1 =  '<a href="#" onclick="eliminarUsuario(' + usuario.id + ')"><img src="img/lapiz.png" alt="Eliminar" style="width: 30px; height: 30px;"></a>'
         let botonEliminar = '<a href="#" onclick="eliminarUsuario(' + usuario.id + ')" class="btn-danger btn-circle btn-sm"> <i class="fas fa-trash"></i> </a>'
         let telefonoTexto = usuario.telefono ? usuario.telefono : '-';
         let usuariohtml = '<tr><td>' + usuario.id + '</td> <td>' + usuario.nombre + '</td> <td>'

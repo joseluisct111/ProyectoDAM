@@ -8,6 +8,10 @@ import de.mkammerer.argon2.Argon2;
 import de.mkammerer.argon2.Argon2Factory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +37,6 @@ public class UsuarioController {
 
 
     }
-
     @RequestMapping(value = "api/usuarios",method = RequestMethod.GET)
     public List<Usuario> getUsuario(@RequestHeader("Authorization") String token) {
         if (!validarToken(token)) {
@@ -41,7 +44,6 @@ public class UsuarioController {
         }
         return usuarioDao.getUsuarios();
     }
-
     @RequestMapping(value = "api/usuarios",method = RequestMethod.POST )
     public void registrarUsuario(@RequestBody Usuario usuario) {
 
@@ -59,7 +61,19 @@ public class UsuarioController {
         String usuarioId = jwtUtil.getKey(token);
         return usuarioId != null;
     }
+    @RequestMapping(value = "api/login",method = RequestMethod.POST )
+    public String login(@RequestBody Usuario usuario) {
+        Usuario loginUser = usuarioDao.Credenciales(usuario);
+        if (loginUser != null){
 
+            String tokenJwt;
+            tokenJwt = jwtUtil.create(loginUser.getId().toString(), loginUser.getEmail()   );
+
+            return tokenJwt ;
+        } else {
+            return "fail";
+        }
+    }
     public Usuario editar() {
         Usuario usuario = new Usuario();
         usuario.setNombre("Juan");
