@@ -1,10 +1,12 @@
 // Call the dataTables jQuery plugin
 $(document).ready(function () {
-    alert('Hola');
+
     cargarPluviometros();
+    cargarNombresPluviometros()
+    //actualizarEmailUsuario();
+    //obtenerCantidadPluviometros();
+
     $('#pluviometros').DataTable();
-    actualizarEmailUsuario();
-    obtenerCantidadPluviometros();
 });
 
 function actualizarEmailUsuario() {
@@ -19,6 +21,7 @@ async function cargarPluviometros() {
     const pluviometros = await request.json();
 
     let listadoPluviometrosHtml = '';
+
     for (let pluviometro of pluviometros) {
         let botonEliminar = '<a href="#" onclick="eliminarPluviometro(' + pluviometro.id + ')" class="btn-danger btn-circle btn-sm"> <i class="fas fa-trash"></i> </a>'
         let pluviometroHtml = '<tr><td>' + pluviometro.id + '</td> <td>' + pluviometro.nombre + '</td> <td>'
@@ -27,6 +30,7 @@ async function cargarPluviometros() {
         listadoPluviometrosHtml += pluviometroHtml;
     }
     document.querySelector('#pluviometros tbody').outerHTML = listadoPluviometrosHtml;
+    $('#pluviometros').DataTable();
 }
 
 // Funcion para devolver el headers
@@ -118,3 +122,27 @@ async function eliminarPluviometro(id) {
     });
     location.reload();
 }
+async function cargarNombresPluviometros() {
+    try {
+        const request = await fetch('api/pluviometros', {
+            method: 'GET',
+            headers: getHeaders(),
+        });
+        const pluviometros = await request.json();
+        alert(pluviometros);
+
+        // Limpiar el combobox
+        document.getElementById('selectPluviometros').innerHTML = '';
+
+        // Agregar opciones al combobox
+        pluviometros.forEach(pluviometro => {
+            const option = document.createElement('option');
+            option.value = pluviometro.id;
+            option.textContent = pluviometro.nombre;
+            document.getElementById('selectPluviometros').appendChild(option);
+        });
+    } catch (error) {
+        console.error('Error al cargar los nombres de los pluviómetros:', error);
+    }
+}
+

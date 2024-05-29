@@ -1,10 +1,11 @@
 // Call the dataTables jQuery plugin
 $(document).ready(function () {
     alert('Hola');
-    cargarPluviometros();
+    //cargarPluviometros();
     $('#pluviometros').DataTable();
-    actualizarEmailUsuario();
-    obtenerCantidadPluviometros();
+    //actualizarEmailUsuario();
+   // obtenerCantidadPluviometros();
+    cargarNombresPluviometros()
 });
 
 function actualizarEmailUsuario() {
@@ -117,4 +118,20 @@ async function eliminarPluviometro(id) {
         headers: getHeaders()
     });
     location.reload();
+}
+
+
+async function cargarNombresPluviometros() {
+    const request = await fetch('api/pluviometros', {
+        method: 'GET',
+        headers: getHeaders(),
+    });
+    const pluviometros = await request.json();
+
+    let optionsHtml = '';
+    for (let pluviometro of pluviometros) {
+        optionsHtml += `<option value="${pluviometro.id}">${pluviometro.nombre}</option>`;
+    }
+
+    $('#selectPluviometros').html(optionsHtml);
 }

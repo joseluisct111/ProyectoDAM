@@ -9,19 +9,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Pluviometros</title>
+    <title>MCT Pluviometria</title>
 
-    <!-- Custom fonts for this template -->
+    <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
 
-    <!-- Custom styles for this template -->
+    <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this page -->
-    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
@@ -93,8 +90,8 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Login Screens:</h6>
                     <a class="collapse-item" href="registerpluvi.html">Nuevo Pluviometro</a>
-                    <a class="collapse-item" href="register.html">Register</a>
-                    <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                    <a class="collapse-item" href="pluviometros.html">Listado Pluviometros</a>
+                    <a class="collapse-item" href="registroPluviometros.html">Mediciones Pluviometros</a>
                     <div class="collapse-divider"></div>
                     <h6 class="collapse-header">Other Pages:</h6>
                     <a class="collapse-item" href="404.html">404 Page</a>
@@ -188,51 +185,37 @@
             </nav>
             <!-- End of Topbar -->
 
-            <!-- Begin Page Content -->
-            <div class="container-fluid">
+            <!-- HTML -->
+            <select id="selectPluviometros" multiple>
+                <!-- Las opciones se llenarán dinámicamente con JavaScript -->
+            </select>
 
-                <!-- Page Heading -->
-                <h1 class="h4 mb-2 text-gray-800">Datos Pluviometría</h1>
-                <h1 class="h4 mb-2 text-gray-800">Filtros</h1>
-                <div class="mb-4">
-                    <label for="selectPluviometros" class="form-label">Seleccionar Pluviometro</label>
-                    <select class="form-control" id="selectPluviometros">
-
-                    </select>
-                </div>
-                <div class="mb-4">
-                    <input type="checkbox" id="eliminarceros">
-                    <label for="eliminarceros">Solo Días Lluvia</label>
-                </div>
-
-                <!-- DataTales Example -->
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Gestion Usuarios Pluviometria</h6>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-bordered" id="registros" width="100%" cellspacing="0">
-                                <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Fecha</th>
-                                    <th>Pluviometro</th>
-                                    <th>Litros/m<sup>2</sup></th>
-                                    <th>Acciones</th>
-                                </tr>
-                                </thead>
-
-                                <tbody>
+            <canvas id="myChart"></canvas>
 
 
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
 
-            </div>
+
+            <script>
+
+
+                function loadIframe(municipio) {
+                    var iframe = document.getElementById('iframe_aemet_id33044');
+                    iframe.src = 'https://www.aemet.es/es/eltiempo/prediccion/municipios/mostrarwidget/' + municipio;
+
+                    // Actualizar el número de registros
+                    var numeroRegistros = obtenerNumeroRegistros();
+                    var elementoNumeroRegistros = document.getElementById('numeroRegistros');
+                    if (elementoNumeroRegistros) {
+                        elementoNumeroRegistros.textContent = numeroRegistros;
+                    }
+                }
+
+                window.onload = function () {
+                    loadIframe('murcia-id30030');
+                }
+            </script>
+
+
             <!-- /.container-fluid -->
 
         </div>
@@ -242,7 +225,7 @@
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Jose luis Rodriguez Rodriguez &copy; Proyecto DAM</span>
+                    <span>Jose Luis Rodriguez Rodriguez - Proyecto DAM</span>
                 </div>
             </div>
         </footer>
@@ -259,6 +242,7 @@
     <i class="fas fa-angle-up"></i>
 </a>
 
+<!-- Logout Modal-->
 
 
 <!-- Bootstrap core JavaScript-->
@@ -272,13 +256,14 @@
 <script src="js/sb-admin-2.min.js"></script>
 
 <!-- Page level plugins -->
-<script src="vendor/datatables/jquery.dataTables.min.js"></script>
-<script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="vendor/chart.js/Chart.min.js"></script>
 
 <!-- Page level custom scripts -->
-<script src="js/registrosDiarios.js"></script>
+<script src="js/demo/chart-area-demo.js"></script>
+<script src="js/demo/chart-pie-demo.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <!-- Incluir el archivo de funciones comunes -->
-<script src="js/comunes.js"></script>
+
 
 </body>
 

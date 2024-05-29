@@ -3,28 +3,28 @@ $(document).ready(function() {
     // on Ready
 });
 
-// Función asíncrona para registrar un usuario
-async function registrarUsuario() {
+// Función asíncrona para registrar un Pluviometro
+async function registrarPluviometro() {
     // Recoge los valores de los campos de entrada del formulario y los almacena en un objeto
     let datos = {
-        nombre: document.getElementById('txtNombre').value,
-        apellido  : document.getElementById('txtApellidos').value,
-        email: document.getElementById('txtEmail').value,
-        password  : document.getElementById('txtPassword').value,
+        nombre: document.getElementById('txtNombre').value.trim(),
+        latitud: document.getElementById('txtLatitud').value.trim(),
+        longitud: document.getElementById('txtLongitud').value.trim(),
     };
 
-    // Recoge el valor del campo de entrada 'Repetir Contraseña'
-    let repetirPassword = document.getElementById('txtRepetirPassword').value;
-
-    // Comprueba si la contraseña y la repetición de la contraseña son iguales
-    if  (datos.password != repetirPassword) {
-        // Si las contraseñas no coinciden, muestra una alerta al usuario y detiene la ejecución de la función
-        alert('Las contraseñas no coinciden');
+    // Validar que ninguno de los campos está vacío
+    if (!datos.nombre || !datos.latitud || !datos.longitud) {
+        alert("Por favor, complete todos los campos.");
         return;
     }
 
-    // Si las contraseñas coinciden, realiza una solicitud POST a la API de usuarios con los datos del formulario en formato JSON
-    const request = await fetch('api/usuarios', {
+    // Validar que latitud y longitud son números decimales válidos
+    if (!esDecimal(datos.latitud) || !esDecimal(datos.longitud)) {
+        alert("Por favor, ingrese valores numéricos válidos para la latitud y la longitud.");
+        return;
+    }
+
+    const request = await fetch('api/pluviometros', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -34,9 +34,16 @@ async function registrarUsuario() {
     });
 
     // Una vez que la solicitud se ha completado, muestra una alerta al usuario indicando que el registro se ha realizado correctamente
-    alert("Usuario registrado correctamente");
+    alert("Pluviometro registrado correctamente");
 
     // Redirige al usuario a la página de inicio de sesión
-    window.location.href = 'login.html';
+    window.location.href = 'pluviometros.html';
 }
+
+// Función para validar si un valor puede ser convertido a un número decimal
+function esDecimal(valor) {
+    return !isNaN(valor) && !isNaN(parseFloat(valor));
+}
+
+
 

@@ -1,7 +1,7 @@
 // Call the dataTables jQuery plugin
 $(document).ready(function () {
     cargarUsuarios()
-    $('#usuarios').DataTable();
+
     //actualizarEmailUsuario();
 });
 
@@ -46,6 +46,8 @@ async function cargarUsuarios() {
         listadoUsuariosHtml += usuariohtml;
     }
     document.querySelector('#usuarios tbody').outerHTML = listadoUsuariosHtml;
+
+    $('#usuarios').DataTable();
 }
 
 // Funcion para devolver el headers
