@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
+
+<head th:replace="~{layout/layout :: head}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container-fluid" layout:fragment="page-content">
+        <h1 th:text="${titulo}"></h1>
+
+        <table style="margin-left: auto; margin-right: auto;">
+            <tr>
+                <td colspan="3" align="center"><b>Elige Un Municipio</b></td>
+            </tr>
+            <tr>
+                <td><a class="btn btn-primary btn-user btn-block"
+                       onclick="loadIframe('murcia-id30030')">Murcia</a></td>
+                <td><a class="btn btn-primary btn-user btn-block" onclick="loadIframe('cartagena-id30016')">Cartagena</a>
+                </td>
+                <td><a class="btn btn-primary btn-user btn-block"
+                       onclick="loadIframe('alacant-alicante-id03014?')">Alicante</a></td>
+            </tr>
+            <tr>
+                <td><a class="btn btn-primary btn-user btn-block"
+                       onclick="loadIframe('bullas-id30012')">Bullas</a></td>
+                <td><a class="btn btn-primary btn-user btn-block"
+                       onclick="loadIframe('nerpio-id02055?')">Nerpio</a></td>
+                <td><a class="btn btn-primary btn-user btn-block" onclick="loadIframe('register')">Orihuela</a>
+                </td>
+            </tr>
+
+        </table>
+
+        <hr> <!-- Línea separadora -->
+
+        <iframe name="iframe_aemet_id33044" width="100%" height="200px" tabindex="0" id="iframe_aemet_id33044"
+                frameborder="0" scrolling="no"></iframe>
+
+
+        <script>
+
+
+            function loadIframe(municipio) {
+                var iframe = document.getElementById('iframe_aemet_id33044');
+                iframe.src = 'https://www.aemet.es/es/eltiempo/prediccion/municipios/mostrarwidget/' + municipio;
+
+
+            }
+
+            window.onload = function () {
+                loadIframe('murcia-id30030');
+            }
+        </script>
+    </div>
+    <!--OTRO SCRIPTS PARA PAGINAS-->
+    <th:block layout:fragment="page-scripts">
+        <script src="js/comunes.js"></script>
+        <script src="//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js"></script>
+        <script src="//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js"></script>
+    </th:block>
+</body>
+</html>

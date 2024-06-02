@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
-<head>
+<head th:fragment="~{::head}">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,19 +11,28 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Pluviometros</title>
+    <title>MCT Pluviometria</title>
 
-    <!-- Custom fonts for this template -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom fonts for this template-->
+    <link th:href="@{vendor/fontawesome-free/css/all.min.css}" rel="stylesheet" type="text/css">
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link th:href="@{css/sb-admin-2.min.css}" rel="stylesheet">
+    <link th:href="@{vendor/datatables/dataTables.bootstrap4.min.css}" rel="stylesheet">
+    <!-- Bootstrap core JavaScript-->
+    <script th:src="@{vendor/jquery/jquery.min.js}"></script>
+    <script th:src="@{vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
 
-    <!-- Custom styles for this page -->
-    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <!-- Core plugin JavaScript-->
+    <script th:src="@{vendor/jquery-easing/jquery.easing.min.js}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script th:src="@{js/sb-admin-2.min.js}"></script>
+
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 
 </head>
 
@@ -44,7 +55,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="/">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Inicio</span></a>
         </li>
@@ -67,12 +78,11 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Usuarios</h6>
-                    <a class="collapse-item" href="registeruser.html">Nuevo Usuario</a>
-                    <a class="collapse-item" href="usuarios.html">Listado Usuarios</a>
+                    <a class="collapse-item" href="/registeruser">Nuevo Usuario</a>
+                    <a class="collapse-item" href="/usuario">Listado Usuarios</a>
                 </div>
             </div>
         </li>
-
 
         <!-- Divider -->
         <hr class="sidebar-divider">
@@ -92,13 +102,11 @@
             <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Login Screens:</h6>
-                    <a class="collapse-item" href="registerpluvi.html">Nuevo Pluviometro</a>
-                    <a class="collapse-item" href="register.html">Register</a>
-                    <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                    <div class="collapse-divider"></div>
-                    <h6 class="collapse-header">Other Pages:</h6>
-                    <a class="collapse-item" href="404.html">404 Page</a>
-                    <a class="collapse-item" href="blank.html">Blank Page</a>
+                    <a class="collapse-item" href="/registerpluvi">Nuevo Pluviometro</a>
+                    <a class="collapse-item" href="/pluviometro">Listado Pluviometros</a>
+                    <a class="collapse-item" href="/datospluviometros">Mediciones Pluviometros</a>
+                    <a class="collapse-item" href="/cargardatos">Cargar Datos Manual</a>
+
                 </div>
             </div>
         </li>
@@ -188,51 +196,11 @@
             </nav>
             <!-- End of Topbar -->
 
-            <!-- Begin Page Content -->
-            <div class="container-fluid">
 
-                <!-- Page Heading -->
-                <h1 class="h4 mb-2 text-gray-800">Datos Pluviometría</h1>
-                <h1 class="h4 mb-2 text-gray-800">Filtros</h1>
-                <div class="mb-4">
-                    <label for="selectPluviometros" class="form-label">Seleccionar Pluviometro</label>
-                    <select class="form-control" id="selectPluviometros">
-
-                    </select>
-                </div>
-                <div class="mb-4">
-                    <input type="checkbox" id="eliminarceros">
-                    <label for="eliminarceros">Solo Días Lluvia</label>
-                </div>
-
-                <!-- DataTales Example -->
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Gestion Usuarios Pluviometria</h6>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-bordered" id="registros" width="100%" cellspacing="0">
-                                <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Fecha</th>
-                                    <th>Pluviometro</th>
-                                    <th>Litros/m<sup>2</sup></th>
-                                    <th>Acciones</th>
-                                </tr>
-                                </thead>
-
-                                <tbody>
-
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+            <div class="container-fluid" layout:fragment="page-content" >
 
             </div>
+
             <!-- /.container-fluid -->
 
         </div>
@@ -242,7 +210,7 @@
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Jose luis Rodriguez Rodriguez &copy; Proyecto DAM</span>
+                    <span>Jose Luis Rodriguez Rodriguez - Proyecto DAM</span>
                 </div>
             </div>
         </footer>
@@ -259,27 +227,17 @@
     <i class="fas fa-angle-up"></i>
 </a>
 
+<!-- Logout Modal-->
 
 
-<!-- Bootstrap core JavaScript-->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<!-- Core plugin JavaScript-->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-<!-- Custom scripts for all pages-->
-<script src="js/sb-admin-2.min.js"></script>
-
-<!-- Page level plugins -->
-<script src="vendor/datatables/jquery.dataTables.min.js"></script>
-<script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-<!-- Page level custom scripts -->
-<script src="js/registrosDiarios.js"></script>
-<!-- Incluir el archivo de funciones comunes -->
-<script src="js/comunes.js"></script>
 
 </body>
+<!--OTRO SCRIPTS PARA PAGINAS-->
+<th:block layout:fragment="page-scripts">
+
+</th:block>
+
 
 </html>

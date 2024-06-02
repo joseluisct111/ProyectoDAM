@@ -25,6 +25,7 @@ async function cargarPluviometros() {
         listadoPluviometrosHtml += pluviometroHtml;
     }
     document.querySelector('#pluviometros tbody').outerHTML = listadoPluviometrosHtml;
+    $('#usuarios').DataTable();
 }
 
 async function cargarUsuarios() {
@@ -47,7 +48,7 @@ async function cargarUsuarios() {
     }
     document.querySelector('#usuarios tbody').outerHTML = listadoUsuariosHtml;
 
-    $('#usuarios').DataTable();
+
 }
 
 // Funcion para devolver el headers

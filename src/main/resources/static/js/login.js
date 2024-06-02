@@ -10,7 +10,7 @@ async function IniciarSesion() {
         password  : document.getElementById('txtPassword').value,
        };
 
-    const request = await fetch('api/login', {
+    const request = await fetch('/api/login', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -24,7 +24,7 @@ async function IniciarSesion() {
     if(respuesta != 'fail') {
         localStorage.setItem('token', respuesta);
         localStorage.setItem('email', datos.email);
-        window.location.href = 'index.html';
+        window.location.href = '/inicio';
     } else {
         var mensaje = 'Usuario o contraseña incorrectos';
         var titulo = 'Error de autenticación';

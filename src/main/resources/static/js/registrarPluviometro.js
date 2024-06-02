@@ -37,7 +37,7 @@ async function registrarPluviometro() {
     alert("Pluviometro registrado correctamente");
 
     // Redirige al usuario a la página de inicio de sesión
-    window.location.href = 'pluviometros.html';
+    window.location.href = '/pluviometro';
 }
 
 // Función para validar si un valor puede ser convertido a un número decimal
