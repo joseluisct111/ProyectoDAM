@@ -1,5 +1,6 @@
 package com.dam.Proyecto.dao;
 
+import com.dam.Proyecto.models.Pluviometro;
 import com.dam.Proyecto.models.RegistroDiario;
 import java.util.List;
 
@@ -17,5 +18,7 @@ public interface RegistroDiarioDao {
     List<Integer> getYears();
 
     List<Double> getLluviaPorMes(Long pluviometroId, Integer year);
+
+    Pluviometro obtenerPorId(int id);
 }
 

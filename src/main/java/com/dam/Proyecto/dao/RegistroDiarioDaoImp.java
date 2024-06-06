@@ -1,5 +1,6 @@
 package com.dam.Proyecto.dao;
 
+import com.dam.Proyecto.models.Pluviometro;
 import com.dam.Proyecto.models.RegistroDiario;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -56,5 +57,15 @@ public class RegistroDiarioDaoImp implements RegistroDiarioDao {
     @Override
     public List<Double> getLluviaPorMes(Long pluviometroId, Integer year) {
         return null;
+    }
+
+    @Override
+    public Pluviometro obtenerPorId(int id) {
+        Pluviometro pluviometro = entityManager.find(Pluviometro.class, id);
+        if (pluviometro != null) {
+            return pluviometro;
+        } else {
+            return null;
+        }
     }
 }

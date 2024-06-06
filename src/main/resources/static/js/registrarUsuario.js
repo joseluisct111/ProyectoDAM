@@ -34,9 +34,9 @@ async function registrarUsuario() {
     });
 
     // Una vez que la solicitud se ha completado, muestra una alerta al usuario indicando que el registro se ha realizado correctamente
-    alert("Usuario registrado correctamente");
+    alert("Prueba 1");
 
     // Redirige al usuario a la página de inicio de sesión
-    window.location.href = 'login.html';
+    window.location.href = '/inicio';
 }
 

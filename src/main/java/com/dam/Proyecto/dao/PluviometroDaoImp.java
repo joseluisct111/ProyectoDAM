@@ -3,6 +3,7 @@ package com.dam.Proyecto.dao;
 import com.dam.Proyecto.models.Pluviometro;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -28,7 +29,15 @@ public class PluviometroDaoImp implements PluviometroDao {
             entityManager.remove(pluviometro);
         }
     }
-
+    @Override
+    public Pluviometro obtenerPorId(int id) {
+    Pluviometro pluviometro = entityManager.find(Pluviometro.class, id);
+    if (pluviometro != null) {
+        return pluviometro;
+    } else {
+        return null;
+    }
+}
     @Override
     public void registrar(Pluviometro pluviometro) {
         entityManager.persist(pluviometro);
@@ -37,6 +46,11 @@ public class PluviometroDaoImp implements PluviometroDao {
     @Override
     public Pluviometro getPluviometro(Long id) {
         return entityManager.find(Pluviometro.class, id);
+    }
+    @Override
+    public Long contarPluviometros() {
+        Query query = entityManager.createQuery("SELECT COUNT(p) FROM Pluviometro p");
+        return (Long) query.getSingleResult();
     }
 }
 

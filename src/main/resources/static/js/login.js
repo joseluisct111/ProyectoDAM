@@ -22,8 +22,8 @@ async function IniciarSesion() {
     const respuesta = await request.text();
 
     if(respuesta != 'fail') {
-        localStorage.setItem('token', respuesta);
-        localStorage.setItem('email', datos.email);
+        sessionStorage.setItem('token', respuesta);
+        sessionStorage.setItem('email', datos.email);
         window.location.href = '/inicio';
     } else {
         var mensaje = 'Usuario o contraseña incorrectos';

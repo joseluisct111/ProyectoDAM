@@ -21,6 +21,11 @@ public class HomeController {
         model.addAttribute("titulo", "Bienvenido a la aplicación de registro de lluvias");
         return "pluviometros";
     }
+    @GetMapping("/mapa")
+    public String mapa(Model model) {
+        model.addAttribute("titulo", "Bienvenido a la aplicación de registro de lluvias");
+        return "mapapluviometros";
+    }
     @GetMapping("/cargardatos")
     public String cargardatos(Model model) {
         model.addAttribute("titulo", "Bienvenido a la aplicación de registro de lluvias");
@@ -29,7 +34,7 @@ public class HomeController {
     @GetMapping("/datospluviometros")
     public String datospluviometro(Model model) {
         model.addAttribute("titulo", "Bienvenido a la aplicación de registro de lluvias");
-        return "registropluviometros";
+        return "registroPluviometros";
     }
     @GetMapping("/")
     public String login(Model model) {

@@ -42,7 +42,10 @@ public class PluviometroController {
     public List<Pluviometro> getPluviometros(@RequestHeader("Authorization") String token) {
         return pluviometroDao.getPluviometros();
     }
-
+    @RequestMapping(value = "/api/pluviometros/count", method = RequestMethod.GET)
+    public Long contarPluviometros(@RequestHeader("Authorization") String token) {
+        return pluviometroDao.contarPluviometros();
+    }
     @RequestMapping(value = "/api/pluviometros", method = RequestMethod.POST)
     public void registrarPluviometro(@RequestBody Pluviometro pluviometro) {
         pluviometroDao.registrar(pluviometro);
@@ -64,11 +67,17 @@ public class PluviometroController {
     }
 
     @GetMapping("/export-pdf")
-    public ResponseEntity<byte[]> exportPdf() throws JRException, FileNotFoundException {
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_PDF);
-        headers.setContentDispositionFormData("petsReport", "petsReport.pdf");
-        return ResponseEntity.ok().headers(headers).body(pluviservice.exportPdf());
+    public ResponseEntity<byte[]> exportPdf() {
+        try {
+            byte[] pdfBytes = pluviservice.exportPdf();
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentType(MediaType.APPLICATION_PDF);
+            headers.setContentDispositionFormData("attachment", "pluviometros.pdf");
+            return ResponseEntity.ok().headers(headers).body(pdfBytes);
+        } catch (JRException | FileNotFoundException e) {
+            e.printStackTrace(); // Manejo de excepciones, puedes personalizarlo según tus necesidades
+            return ResponseEntity.status(500).body("Error al generar el PDF".getBytes());
+        }
     }
 
     @GetMapping("/export-xls")
@@ -96,7 +105,7 @@ public class PluviometroController {
             if (filename == null || filename.length() < 2) {
                 return "Nombre del archivo no válido.";
             }
-            Long pluviometroId = Long.parseLong(filename.substring(0, 2));
+            int pluviometroId = Integer.parseInt(filename.substring(0, 2));
 
             // Convertir el archivo JSON en una lista de objetos RegistroDiario
             ObjectMapper objectMapper = new ObjectMapper();

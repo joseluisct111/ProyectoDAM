@@ -1,6 +1,6 @@
 // Call the dataTables jQuery plugin
 $(document).ready(function () {
-    cargarNombresPluviometros()
+    //cargarNombresPluviometros()
     cargarRegistros();
 
     //actualizarEmailUsuario();
@@ -14,7 +14,7 @@ function actualizarEmailUsuario() {
 }
 
 async function cargarRegistros() {
-    const request = await fetch('/api/registroDiarios/mediciones', {
+    const request = await fetch('api/registroDiarios/mediciones', {
         method: 'GET',
         headers: getHeaders(),
     });
@@ -39,7 +39,7 @@ function getHeaders() {
     return {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Authorization': localStorage.token
+        'Authorization': sessionStorage.token
     }
 
 }

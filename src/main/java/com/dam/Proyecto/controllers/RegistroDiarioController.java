@@ -1,24 +1,34 @@
 package com.dam.Proyecto.controllers;
 
+import com.dam.Proyecto.dao.PluviometroDao;
 import com.dam.Proyecto.dao.RegistroDiarioDao;
 import com.dam.Proyecto.models.Pluviometro;
 import com.dam.Proyecto.models.RegistroDiario;
 import com.dam.Proyecto.util.JWTUtil;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 
-
 @RestController
-@RequestMapping("/api/registroDiarios")
+@RequestMapping("api/registroDiarios")
 public class RegistroDiarioController {
 
     @Autowired
     private RegistroDiarioDao registroDiarioDao;
 
     @Autowired
+    private PluviometroDao pluviometroDao;
+
+    @Autowired
     private JWTUtil jwtUtil;
+
+    @Autowired
+    private ObjectMapper objectMapper;
 
     @GetMapping("/{id}")
     public RegistroDiario getRegistroDiario(@PathVariable Long id) {
@@ -30,7 +40,7 @@ public class RegistroDiarioController {
         return registroDiarioDao.getRegistrosDiariosPorPluviometro(idPluviometro);
     }
 
-    @GetMapping("/mediciones") // Corregido el mapeo de la ruta
+    @GetMapping("/mediciones")
     public List<RegistroDiario> getRegistrosDiarios() {
         return registroDiarioDao.getRegistrosDiarios();
     }
@@ -44,4 +54,48 @@ public class RegistroDiarioController {
     public void eliminarRegistroDiario(@PathVariable Long id) {
         registroDiarioDao.eliminar(id);
     }
+
+    // Nuevo método para cargar el archivo
+
+    @PostMapping("/cargar")
+    public String cargarArchivo(@RequestParam("file") MultipartFile file) {
+        if (file.isEmpty()) {
+            return "Por favor, seleccione un archivo.";
+        }
+
+        try {
+            // Obtener los primeros dos caracteres del nombre del archivo como pluviometroId
+            String filename = file.getOriginalFilename();
+            if (filename == null || filename.length() < 2) {
+                return "Nombre del archivo no válido.";
+            }
+            int pluviometroId = Integer.parseInt(filename.substring(0, 2));
+
+            // Obtener el objeto Pluviometro correspondiente al pluviometroId
+            Pluviometro pluviometro = pluviometroDao.obtenerPorId(pluviometroId);
+            if (pluviometro == null) {
+                return "No se encontró un pluviómetro con el ID proporcionado.";
+            }
+
+            // Convertir el archivo JSON en una lista de objetos RegistroDiario
+            List<RegistroDiario> registros = objectMapper.readValue(file.getInputStream(), new TypeReference<List<RegistroDiario>>() {});
+
+            // Registrar cada registro en la base de datos
+            for (RegistroDiario registro : registros) {
+                registro.setPluviometroId(pluviometroId);
+                registro.setPluviometro(pluviometro); // Establecer el objeto Pluviometro
+                registroDiarioDao.registrar(registro);
+            }
+
+            return "Archivo cargado y datos registrados exitosamente.";
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            return "Error al procesar el archivo.";
+        }
+    }
+
+
+
 }
+

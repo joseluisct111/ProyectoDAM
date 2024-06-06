@@ -5,28 +5,7 @@ $(document).ready(function () {
     //actualizarEmailUsuario();
 });
 
-//function actualizarEmailUsuario() {
-//    document.getElementById('txt-email-usuario').outerHTML = localStorage.email;
-//}
 
-async function cargarPluviometros() {
-    const request = await fetch('api/pluviometros', {
-        method: 'GET',
-        headers: getHeaders(),
-    });
-    const pluviometros = await request.json();
-
-    let listadoPluviometrosHtml = '';
-    for (let pluviometro of pluviometros) {
-        let botonEliminar = '<a href="#" onclick="eliminarPluviometro(' + pluviometro.id + ')" class="btn-danger btn-circle btn-sm"> <i class="fas fa-trash"></i> </a>'
-        let pluviometroHtml = '<tr><td>' + pluviometro.id + '</td> <td>' + pluviometro.nombre + '</td> <td>'
-            + pluviometro.latitud + '</td> <td>'
-            + pluviometro.longitud + '</td> <td> ' + botonEliminar + ' </td></tr>';
-        listadoPluviometrosHtml += pluviometroHtml;
-    }
-    document.querySelector('#pluviometros tbody').outerHTML = listadoPluviometrosHtml;
-    $('#usuarios').DataTable();
-}
 
 async function cargarUsuarios() {
 
@@ -56,7 +35,7 @@ function getHeaders() {
     return {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Authorization': localStorage.token
+        'Authorization': sessionStorage.token
     }
 }
 

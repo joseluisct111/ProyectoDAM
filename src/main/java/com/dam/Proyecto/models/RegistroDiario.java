@@ -6,6 +6,7 @@ import lombok.Setter;
 import lombok.ToString;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import com.dam.Proyecto.models.Pluviometro;
 
 @Entity
 @Table(name = "registro_diario") // Cambio el nombre de la tabla a "registro_diario"
@@ -20,13 +21,16 @@ public class RegistroDiario { // Cambio el nombre de la clase a "RegistroDiario"
     private LocalDate fecha;
 
     @Getter @Setter @Column(name = "pluviometro_id", nullable = false) // Agrego una columna "pluviometro_id" como BIGINT NOT NULL
-    private Long pluviometroId;
+    private Integer pluviometroId;
 
     @Getter @Setter @Column(name = "volumen_lluvia", nullable = false) // Agrego una columna "volumen_lluvia" como DECIMAL NOT NULL
     private BigDecimal volumenLluvia;
 
     // Agrego la relación con la tabla "pluviometros"
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "pluviometro_id", referencedColumnName = "id", insertable = false, updatable = false)
+    @Setter @Getter
     private Pluviometro pluviometro;
+
+
 }

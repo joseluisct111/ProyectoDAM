@@ -36,7 +36,7 @@ public class PluviReportGenerator {
 
     private JasperPrint getReport(List<Pluviometro> list) throws FileNotFoundException, JRException {
         Map<String, Object> params = new HashMap<String, Object>();
-        params.put("petsData", new JRBeanCollectionDataSource(list));
+        params.put("publiData", new JRBeanCollectionDataSource(list));
 
         JasperPrint report = JasperFillManager.fillReport(JasperCompileManager.compileReport(
                 ResourceUtils.getFile("classpath:pluviometros.jrxml")
