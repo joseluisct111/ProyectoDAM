@@ -1,14 +1,19 @@
 let map;
 
 function initMap() {
+    // Coordenadas aproximadas del centro de la Región de Murcia
+    const murciaCoords = { lat: 37.983444, lng: -1.129889 };
+
+    // Inicializar el mapa centrado en la Región de Murcia
     map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 8,
+        center: murciaCoords,
+        zoom: 9,  // Ajustar el nivel de zoom según sea necesario
     });
 
     // Cargar los pluviómetros en el mapa y en la lista después de inicializar el mapa
     cargarPluviometros();
 }
+
 
 function getHeaders() {
     return {

@@ -1,3 +1,4 @@
+
 function loadIframe(municipio) {
     var iframe = document.getElementById('iframe_aemet_id33044');
     iframe.src = 'https://www.aemet.es/es/eltiempo/prediccion/municipios/mostrarwidget/' + municipio;
@@ -24,6 +25,7 @@ async function cargarNumeroPluviometros() {
 
 window.onload = function () {
     alert('La página se ha cargado correctamente.'); // Verifica si la página se ha cargado correctamente
+    actualizarEmailUsuario();
     loadIframe('murcia-id30030');
     cargarNumeroPluviometros();
 }

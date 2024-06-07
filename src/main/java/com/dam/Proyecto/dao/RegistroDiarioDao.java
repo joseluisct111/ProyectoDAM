@@ -5,7 +5,7 @@ import com.dam.Proyecto.models.RegistroDiario;
 import java.util.List;
 
 public interface RegistroDiarioDao {
-    List<RegistroDiario> getRegistrosDiarios();
+    List<Object[]> getRegistrosDiarios();
 
     List<RegistroDiario> getRegistrosDiariosPorPluviometro(Long idPluviometro);
 

@@ -9,8 +9,6 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
-import java.time.Month;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -22,10 +20,11 @@ public class RegistroDiarioDaoImp implements RegistroDiarioDao {
     private EntityManager entityManager;
 
     @Override
-    public List<RegistroDiario> getRegistrosDiarios() {
-        String query = "FROM RegistroDiario";
-        return entityManager.createQuery(query, RegistroDiario.class).getResultList();
-    }
+    public List<Object[]> getRegistrosDiarios() {
+        String query = "SELECT r.id, r.fecha, p.nombre, r.volumenLluvia FROM RegistroDiario r JOIN r.pluviometro p";
+        return entityManager.createQuery(query, Object[].class).getResultList();
+        }
+
 
     @Override
     public List<RegistroDiario> getRegistrosDiariosPorPluviometro(Long idPluviometro) {

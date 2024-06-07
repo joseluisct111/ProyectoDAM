@@ -50,7 +50,23 @@
                 </tr>
             </table>
         </div>
-
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-bottom-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Numero de Pluviometros
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="diasLlvia">0</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <iframe id="iframe_aemet_id33044" style="width: 100%; height: 200px; border: none;"></iframe>
     <div class="form-group">
@@ -63,13 +79,12 @@
     </div>
     <div id="chart_div" style="width: 100%; height: 300px;"></div>
 
-
     <!--OTRO SCRIPTS PARA PAGINAS-->
 </div>
 </body>
 <th:block layout:fragment="page-scripts">
-    <script src="js/comunes.js"></script>
-    <script src="js/inicio.js"></script>
+    <script src="/js/comunes.js"></script>
+    <script src="/js/inicio.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         google.charts.load('current', {'packages': ['corechart', 'bar']});
@@ -137,3 +152,4 @@
     </script>
 </th:block>
 </html>
+

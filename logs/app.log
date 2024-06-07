@@ -612,3 +612,498 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving template [forgo
 2024-06-07T19:07:13.123+02:00  INFO 7928 --- [Proyecto] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-06-07T19:07:13.123+02:00  INFO 7928 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2024-06-07T19:07:13.124+02:00  INFO 7928 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-07T19:12:30.890+02:00  INFO 7928 --- [Proyecto] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:12:30.892+02:00  INFO 7928 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-07T19:12:30.899+02:00  INFO 7928 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-07T19:14:12.095+02:00  INFO 9736 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Starting ProyectoApplication using Java 17.0.9 with PID 9736 (C:\Users\Joseluisct\Desktop\Proyecto\target\classes started by Joseluisct in C:\Users\Joseluisct\Desktop\Proyecto)
+2024-06-07T19:14:12.098+02:00  INFO 9736 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-07T19:14:12.873+02:00  INFO 9736 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-07T19:14:12.934+02:00  INFO 9736 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
+2024-06-07T19:14:13.393+02:00  INFO 9736 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-07T19:14:13.403+02:00  INFO 9736 --- [Proyecto] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-07T19:14:13.404+02:00  INFO 9736 --- [Proyecto] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-07T19:14:13.468+02:00  INFO 9736 --- [Proyecto] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-07T19:14:13.468+02:00  INFO 9736 --- [Proyecto] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1128 ms
+2024-06-07T19:14:13.582+02:00  INFO 9736 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-07T19:14:13.721+02:00  INFO 9736 --- [Proyecto] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1c6a0103
+2024-06-07T19:14:13.723+02:00  INFO 9736 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-07T19:14:13.758+02:00  INFO 9736 --- [Proyecto] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-07T19:14:13.826+02:00  INFO 9736 --- [Proyecto] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-07T19:14:13.865+02:00  INFO 9736 --- [Proyecto] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-07T19:14:14.113+02:00  INFO 9736 --- [Proyecto] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-07T19:14:14.186+02:00  WARN 9736 --- [Proyecto] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-07T19:14:15.016+02:00  INFO 9736 --- [Proyecto] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-07T19:14:15.019+02:00  INFO 9736 --- [Proyecto] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:14:15.341+02:00  INFO 9736 --- [Proyecto] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-06-07T19:14:15.551+02:00  WARN 9736 --- [Proyecto] [main] o.thymeleaf.templatemode.TemplateMode    : [THYMELEAF][main] Unknown Template Mode 'HTML5'. Must be one of: 'HTML', 'XML', 'TEXT', 'JAVASCRIPT', 'CSS', 'RAW'. Using default Template Mode 'HTML'.
+2024-06-07T19:14:15.691+02:00  INFO 9736 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-06-07T19:14:15.699+02:00  INFO 9736 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Started ProyectoApplication in 4.068 seconds (process running for 4.724)
+2024-06-07T19:14:24.525+02:00  INFO 9736 --- [Proyecto] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-07T19:14:24.525+02:00  INFO 9736 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-07T19:14:24.526+02:00  INFO 9736 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-07T19:18:10.468+02:00  INFO 9736 --- [Proyecto] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:18:10.470+02:00  INFO 9736 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-07T19:18:10.477+02:00  INFO 9736 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-07T19:18:19.756+02:00  INFO 14408 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Starting ProyectoApplication using Java 17.0.9 with PID 14408 (C:\Users\Joseluisct\Desktop\Proyecto\target\classes started by Joseluisct in C:\Users\Joseluisct\Desktop\Proyecto)
+2024-06-07T19:18:19.758+02:00  INFO 14408 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-07T19:18:20.563+02:00  INFO 14408 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-07T19:18:20.628+02:00  INFO 14408 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interface.
+2024-06-07T19:18:21.092+02:00  INFO 14408 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-07T19:18:21.103+02:00  INFO 14408 --- [Proyecto] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-07T19:18:21.104+02:00  INFO 14408 --- [Proyecto] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-07T19:18:21.171+02:00  INFO 14408 --- [Proyecto] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-07T19:18:21.172+02:00  INFO 14408 --- [Proyecto] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1169 ms
+2024-06-07T19:18:21.291+02:00  INFO 14408 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-07T19:18:21.434+02:00  INFO 14408 --- [Proyecto] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30b3d899
+2024-06-07T19:18:21.436+02:00  INFO 14408 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-07T19:18:21.473+02:00  INFO 14408 --- [Proyecto] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-07T19:18:21.541+02:00  INFO 14408 --- [Proyecto] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-07T19:18:21.579+02:00  INFO 14408 --- [Proyecto] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-07T19:18:21.835+02:00  INFO 14408 --- [Proyecto] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-07T19:18:21.910+02:00  WARN 14408 --- [Proyecto] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-07T19:18:22.733+02:00  INFO 14408 --- [Proyecto] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-07T19:18:22.737+02:00  INFO 14408 --- [Proyecto] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:18:23.054+02:00  INFO 14408 --- [Proyecto] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-06-07T19:18:23.253+02:00  WARN 14408 --- [Proyecto] [main] o.thymeleaf.templatemode.TemplateMode    : [THYMELEAF][main] Unknown Template Mode 'HTML5'. Must be one of: 'HTML', 'XML', 'TEXT', 'JAVASCRIPT', 'CSS', 'RAW'. Using default Template Mode 'HTML'.
+2024-06-07T19:18:23.398+02:00  INFO 14408 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-06-07T19:18:23.406+02:00  INFO 14408 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Started ProyectoApplication in 4.095 seconds (process running for 4.745)
+2024-06-07T19:18:30.287+02:00  INFO 14408 --- [Proyecto] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-07T19:18:30.287+02:00  INFO 14408 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-07T19:18:30.289+02:00  INFO 14408 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-06-07T19:22:28.146+02:00  INFO 14408 --- [Proyecto] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:22:28.149+02:00  INFO 14408 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-07T19:22:28.156+02:00  INFO 14408 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-07T19:22:31.914+02:00  INFO 17292 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Starting ProyectoApplication using Java 17.0.9 with PID 17292 (C:\Users\Joseluisct\Desktop\Proyecto\target\classes started by Joseluisct in C:\Users\Joseluisct\Desktop\Proyecto)
+2024-06-07T19:22:31.916+02:00  INFO 17292 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-07T19:22:32.685+02:00  INFO 17292 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-07T19:22:32.747+02:00  INFO 17292 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 1 JPA repository interface.
+2024-06-07T19:22:33.267+02:00  INFO 17292 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-07T19:22:33.282+02:00  INFO 17292 --- [Proyecto] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-07T19:22:33.282+02:00  INFO 17292 --- [Proyecto] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-07T19:22:33.360+02:00  INFO 17292 --- [Proyecto] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-07T19:22:33.361+02:00  INFO 17292 --- [Proyecto] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1199 ms
+2024-06-07T19:22:33.482+02:00  INFO 17292 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-07T19:22:33.619+02:00  INFO 17292 --- [Proyecto] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@37775bb1
+2024-06-07T19:22:33.621+02:00  INFO 17292 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-07T19:22:33.658+02:00  INFO 17292 --- [Proyecto] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-07T19:22:33.727+02:00  INFO 17292 --- [Proyecto] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-07T19:22:33.765+02:00  INFO 17292 --- [Proyecto] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-07T19:22:34.018+02:00  INFO 17292 --- [Proyecto] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-07T19:22:34.098+02:00  WARN 17292 --- [Proyecto] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-07T19:22:35.011+02:00  INFO 17292 --- [Proyecto] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-07T19:22:35.015+02:00  INFO 17292 --- [Proyecto] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:22:35.347+02:00  INFO 17292 --- [Proyecto] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-06-07T19:22:35.560+02:00  WARN 17292 --- [Proyecto] [main] o.thymeleaf.templatemode.TemplateMode    : [THYMELEAF][main] Unknown Template Mode 'HTML5'. Must be one of: 'HTML', 'XML', 'TEXT', 'JAVASCRIPT', 'CSS', 'RAW'. Using default Template Mode 'HTML'.
+2024-06-07T19:22:35.747+02:00  INFO 17292 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-06-07T19:22:35.756+02:00  INFO 17292 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Started ProyectoApplication in 4.298 seconds (process running for 5.16)
+2024-06-07T19:22:42.110+02:00  INFO 17292 --- [Proyecto] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-07T19:22:42.110+02:00  INFO 17292 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-07T19:22:42.111+02:00  INFO 17292 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-07T19:23:29.576+02:00  INFO 17292 --- [Proyecto] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:23:29.578+02:00  INFO 17292 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-07T19:23:29.584+02:00  INFO 17292 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-07T19:23:33.187+02:00  INFO 10716 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Starting ProyectoApplication using Java 17.0.9 with PID 10716 (C:\Users\Joseluisct\Desktop\Proyecto\target\classes started by Joseluisct in C:\Users\Joseluisct\Desktop\Proyecto)
+2024-06-07T19:23:33.189+02:00  INFO 10716 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-07T19:23:33.970+02:00  INFO 10716 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-07T19:23:34.047+02:00  INFO 10716 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 1 JPA repository interface.
+2024-06-07T19:23:34.529+02:00  INFO 10716 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-07T19:23:34.541+02:00  INFO 10716 --- [Proyecto] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-07T19:23:34.541+02:00  INFO 10716 --- [Proyecto] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-07T19:23:34.609+02:00  INFO 10716 --- [Proyecto] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-07T19:23:34.610+02:00  INFO 10716 --- [Proyecto] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1175 ms
+2024-06-07T19:23:34.729+02:00  INFO 10716 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-07T19:23:34.869+02:00  INFO 10716 --- [Proyecto] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@42a0786f
+2024-06-07T19:23:34.871+02:00  INFO 10716 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-07T19:23:34.907+02:00  INFO 10716 --- [Proyecto] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-07T19:23:34.978+02:00  INFO 10716 --- [Proyecto] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-07T19:23:35.019+02:00  INFO 10716 --- [Proyecto] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-07T19:23:35.272+02:00  INFO 10716 --- [Proyecto] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-07T19:23:35.348+02:00  WARN 10716 --- [Proyecto] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-07T19:23:36.192+02:00  INFO 10716 --- [Proyecto] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-07T19:23:36.194+02:00  INFO 10716 --- [Proyecto] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:23:36.505+02:00  INFO 10716 --- [Proyecto] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-06-07T19:23:36.708+02:00  WARN 10716 --- [Proyecto] [main] o.thymeleaf.templatemode.TemplateMode    : [THYMELEAF][main] Unknown Template Mode 'HTML5'. Must be one of: 'HTML', 'XML', 'TEXT', 'JAVASCRIPT', 'CSS', 'RAW'. Using default Template Mode 'HTML'.
+2024-06-07T19:23:36.845+02:00  INFO 10716 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-06-07T19:23:36.853+02:00  INFO 10716 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Started ProyectoApplication in 4.144 seconds (process running for 4.85)
+2024-06-07T19:23:46.011+02:00  INFO 10716 --- [Proyecto] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-07T19:23:46.011+02:00  INFO 10716 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-07T19:23:46.012+02:00  INFO 10716 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-07T19:27:15.770+02:00  INFO 10716 --- [Proyecto] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:27:15.773+02:00  INFO 10716 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-07T19:27:15.781+02:00  INFO 10716 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-07T19:27:20.657+02:00  INFO 19476 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Starting ProyectoApplication using Java 17.0.9 with PID 19476 (C:\Users\Joseluisct\Desktop\Proyecto\target\classes started by Joseluisct in C:\Users\Joseluisct\Desktop\Proyecto)
+2024-06-07T19:27:20.660+02:00  INFO 19476 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-07T19:27:21.433+02:00  INFO 19476 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-07T19:27:21.491+02:00  INFO 19476 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interface.
+2024-06-07T19:27:21.950+02:00  INFO 19476 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-07T19:27:21.961+02:00  INFO 19476 --- [Proyecto] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-07T19:27:21.961+02:00  INFO 19476 --- [Proyecto] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-07T19:27:22.026+02:00  INFO 19476 --- [Proyecto] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-07T19:27:22.027+02:00  INFO 19476 --- [Proyecto] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1123 ms
+2024-06-07T19:27:22.148+02:00  INFO 19476 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-07T19:27:22.287+02:00  INFO 19476 --- [Proyecto] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34c76167
+2024-06-07T19:27:22.289+02:00  INFO 19476 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-07T19:27:22.323+02:00  INFO 19476 --- [Proyecto] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-07T19:27:22.388+02:00  INFO 19476 --- [Proyecto] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-07T19:27:22.424+02:00  INFO 19476 --- [Proyecto] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-07T19:27:22.670+02:00  INFO 19476 --- [Proyecto] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-07T19:27:22.742+02:00  WARN 19476 --- [Proyecto] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-07T19:27:23.570+02:00  INFO 19476 --- [Proyecto] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-07T19:27:23.573+02:00  INFO 19476 --- [Proyecto] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:27:23.894+02:00  INFO 19476 --- [Proyecto] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-06-07T19:27:24.093+02:00  WARN 19476 --- [Proyecto] [main] o.thymeleaf.templatemode.TemplateMode    : [THYMELEAF][main] Unknown Template Mode 'HTML5'. Must be one of: 'HTML', 'XML', 'TEXT', 'JAVASCRIPT', 'CSS', 'RAW'. Using default Template Mode 'HTML'.
+2024-06-07T19:27:24.231+02:00  INFO 19476 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-06-07T19:27:24.239+02:00  INFO 19476 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Started ProyectoApplication in 4.041 seconds (process running for 4.71)
+2024-06-07T19:27:25.310+02:00  INFO 19476 --- [Proyecto] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-07T19:27:25.310+02:00  INFO 19476 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-07T19:27:25.311+02:00  INFO 19476 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-07T19:31:00.084+02:00  INFO 19476 --- [Proyecto] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:31:00.086+02:00  INFO 19476 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-07T19:31:00.093+02:00  INFO 19476 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-07T19:31:11.492+02:00  INFO 2880 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Starting ProyectoApplication using Java 17.0.9 with PID 2880 (C:\Users\Joseluisct\Desktop\Proyecto\target\classes started by Joseluisct in C:\Users\Joseluisct\Desktop\Proyecto)
+2024-06-07T19:31:11.494+02:00  INFO 2880 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-07T19:31:12.280+02:00  INFO 2880 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-07T19:31:12.341+02:00  INFO 2880 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 1 JPA repository interface.
+2024-06-07T19:31:12.834+02:00  INFO 2880 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-07T19:31:12.845+02:00  INFO 2880 --- [Proyecto] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-07T19:31:12.846+02:00  INFO 2880 --- [Proyecto] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-07T19:31:12.926+02:00  INFO 2880 --- [Proyecto] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-07T19:31:12.926+02:00  INFO 2880 --- [Proyecto] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1202 ms
+2024-06-07T19:31:13.051+02:00  INFO 2880 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-07T19:31:13.188+02:00  INFO 2880 --- [Proyecto] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@377dfb8d
+2024-06-07T19:31:13.190+02:00  INFO 2880 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-07T19:31:13.228+02:00  INFO 2880 --- [Proyecto] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-07T19:31:13.316+02:00  INFO 2880 --- [Proyecto] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-07T19:31:13.355+02:00  INFO 2880 --- [Proyecto] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-07T19:31:13.621+02:00  INFO 2880 --- [Proyecto] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-07T19:31:13.698+02:00  WARN 2880 --- [Proyecto] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-07T19:31:14.545+02:00  INFO 2880 --- [Proyecto] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-07T19:31:14.548+02:00  INFO 2880 --- [Proyecto] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:31:14.868+02:00  INFO 2880 --- [Proyecto] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-06-07T19:31:15.077+02:00  WARN 2880 --- [Proyecto] [main] o.thymeleaf.templatemode.TemplateMode    : [THYMELEAF][main] Unknown Template Mode 'HTML5'. Must be one of: 'HTML', 'XML', 'TEXT', 'JAVASCRIPT', 'CSS', 'RAW'. Using default Template Mode 'HTML'.
+2024-06-07T19:31:15.217+02:00  INFO 2880 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-06-07T19:31:15.227+02:00  INFO 2880 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Started ProyectoApplication in 4.17 seconds (process running for 4.878)
+2024-06-07T19:31:15.273+02:00  INFO 2880 --- [Proyecto] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-07T19:31:15.274+02:00  INFO 2880 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-07T19:31:15.275+02:00  INFO 2880 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-07T19:33:10.466+02:00 ERROR 2880 --- [Proyecto] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0] with root cause
+
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:235) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541) ~[jjwt-0.9.1.jar:0.9.1]
+	at com.dam.Proyecto.util.JWTUtil.getKey(JWTUtil.java:90) ~[classes/:na]
+	at com.dam.Proyecto.controllers.UsuarioController.validarToken(UsuarioController.java:61) ~[classes/:na]
+	at com.dam.Proyecto.controllers.UsuarioController.getUsuario(UsuarioController.java:42) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.20.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.20.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2024-06-07T19:33:22.826+02:00  INFO 2880 --- [Proyecto] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:33:22.828+02:00  INFO 2880 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-07T19:33:22.834+02:00  INFO 2880 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-07T19:33:40.060+02:00  INFO 12316 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Starting ProyectoApplication using Java 17.0.9 with PID 12316 (C:\Users\Joseluisct\Desktop\Proyecto\target\classes started by Joseluisct in C:\Users\Joseluisct\Desktop\Proyecto)
+2024-06-07T19:33:40.063+02:00  INFO 12316 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-07T19:33:40.892+02:00  INFO 12316 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-07T19:33:40.965+02:00  INFO 12316 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 1 JPA repository interface.
+2024-06-07T19:33:41.436+02:00  INFO 12316 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-07T19:33:41.447+02:00  INFO 12316 --- [Proyecto] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-07T19:33:41.447+02:00  INFO 12316 --- [Proyecto] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-07T19:33:41.523+02:00  INFO 12316 --- [Proyecto] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-07T19:33:41.524+02:00  INFO 12316 --- [Proyecto] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1213 ms
+2024-06-07T19:33:41.648+02:00  INFO 12316 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-07T19:33:41.787+02:00  INFO 12316 --- [Proyecto] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e2445f6
+2024-06-07T19:33:41.789+02:00  INFO 12316 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-07T19:33:41.825+02:00  INFO 12316 --- [Proyecto] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-07T19:33:41.894+02:00  INFO 12316 --- [Proyecto] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-07T19:33:41.931+02:00  INFO 12316 --- [Proyecto] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-07T19:33:42.187+02:00  INFO 12316 --- [Proyecto] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-07T19:33:42.259+02:00  WARN 12316 --- [Proyecto] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-07T19:33:43.104+02:00  INFO 12316 --- [Proyecto] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-07T19:33:43.107+02:00  INFO 12316 --- [Proyecto] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:33:43.423+02:00  INFO 12316 --- [Proyecto] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-06-07T19:33:43.649+02:00  WARN 12316 --- [Proyecto] [main] o.thymeleaf.templatemode.TemplateMode    : [THYMELEAF][main] Unknown Template Mode 'HTML5'. Must be one of: 'HTML', 'XML', 'TEXT', 'JAVASCRIPT', 'CSS', 'RAW'. Using default Template Mode 'HTML'.
+2024-06-07T19:33:43.786+02:00  INFO 12316 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-06-07T19:33:43.794+02:00  INFO 12316 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Started ProyectoApplication in 4.195 seconds (process running for 4.848)
+2024-06-07T19:33:44.009+02:00  INFO 12316 --- [Proyecto] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-07T19:33:44.009+02:00  INFO 12316 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-07T19:33:44.011+02:00  INFO 12316 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-07T19:37:24.084+02:00  INFO 12316 --- [Proyecto] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:37:24.086+02:00  INFO 12316 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-07T19:37:24.092+02:00  INFO 12316 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-07T19:37:28.120+02:00  INFO 8524 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Starting ProyectoApplication using Java 17.0.9 with PID 8524 (C:\Users\Joseluisct\Desktop\Proyecto\target\classes started by Joseluisct in C:\Users\Joseluisct\Desktop\Proyecto)
+2024-06-07T19:37:28.122+02:00  INFO 8524 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-07T19:37:28.897+02:00  INFO 8524 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-07T19:37:28.963+02:00  INFO 8524 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 1 JPA repository interface.
+2024-06-07T19:37:29.417+02:00  INFO 8524 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-07T19:37:29.427+02:00  INFO 8524 --- [Proyecto] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-07T19:37:29.427+02:00  INFO 8524 --- [Proyecto] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-07T19:37:29.493+02:00  INFO 8524 --- [Proyecto] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-07T19:37:29.494+02:00  INFO 8524 --- [Proyecto] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1137 ms
+2024-06-07T19:37:29.609+02:00  INFO 8524 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-07T19:37:29.757+02:00  INFO 8524 --- [Proyecto] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b9e25bd
+2024-06-07T19:37:29.759+02:00  INFO 8524 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-07T19:37:29.796+02:00  INFO 8524 --- [Proyecto] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-07T19:37:29.864+02:00  INFO 8524 --- [Proyecto] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-07T19:37:29.901+02:00  INFO 8524 --- [Proyecto] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-07T19:37:30.149+02:00  INFO 8524 --- [Proyecto] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-07T19:37:30.222+02:00  WARN 8524 --- [Proyecto] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-07T19:37:31.057+02:00  INFO 8524 --- [Proyecto] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-07T19:37:31.060+02:00  INFO 8524 --- [Proyecto] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:37:31.376+02:00  INFO 8524 --- [Proyecto] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-06-07T19:37:31.577+02:00  WARN 8524 --- [Proyecto] [main] o.thymeleaf.templatemode.TemplateMode    : [THYMELEAF][main] Unknown Template Mode 'HTML5'. Must be one of: 'HTML', 'XML', 'TEXT', 'JAVASCRIPT', 'CSS', 'RAW'. Using default Template Mode 'HTML'.
+2024-06-07T19:37:31.715+02:00  INFO 8524 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-06-07T19:37:31.723+02:00  INFO 8524 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Started ProyectoApplication in 4.044 seconds (process running for 4.952)
+2024-06-07T19:37:37.422+02:00  INFO 8524 --- [Proyecto] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-07T19:37:37.422+02:00  INFO 8524 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-07T19:37:37.423+02:00  INFO 8524 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-07T19:40:23.467+02:00  INFO 8524 --- [Proyecto] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:40:23.470+02:00  INFO 8524 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-07T19:40:23.476+02:00  INFO 8524 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-07T19:40:26.300+02:00  INFO 15484 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Starting ProyectoApplication using Java 17.0.9 with PID 15484 (C:\Users\Joseluisct\Desktop\Proyecto\target\classes started by Joseluisct in C:\Users\Joseluisct\Desktop\Proyecto)
+2024-06-07T19:40:26.303+02:00  INFO 15484 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-07T19:40:27.238+02:00  INFO 15484 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-07T19:40:27.315+02:00  INFO 15484 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 1 JPA repository interface.
+2024-06-07T19:40:27.910+02:00  INFO 15484 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-07T19:40:27.922+02:00  INFO 15484 --- [Proyecto] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-07T19:40:27.923+02:00  INFO 15484 --- [Proyecto] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-07T19:40:27.997+02:00  INFO 15484 --- [Proyecto] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-07T19:40:27.997+02:00  INFO 15484 --- [Proyecto] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1420 ms
+2024-06-07T19:40:28.129+02:00  INFO 15484 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-07T19:40:28.291+02:00  INFO 15484 --- [Proyecto] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@559991f5
+2024-06-07T19:40:28.293+02:00  INFO 15484 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-07T19:40:28.341+02:00  INFO 15484 --- [Proyecto] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-07T19:40:28.420+02:00  INFO 15484 --- [Proyecto] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-07T19:40:28.462+02:00  INFO 15484 --- [Proyecto] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-07T19:40:28.730+02:00  INFO 15484 --- [Proyecto] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-07T19:40:28.814+02:00  WARN 15484 --- [Proyecto] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-07T19:40:29.814+02:00  INFO 15484 --- [Proyecto] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-07T19:40:29.817+02:00  INFO 15484 --- [Proyecto] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:40:30.205+02:00  INFO 15484 --- [Proyecto] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-06-07T19:40:30.438+02:00  WARN 15484 --- [Proyecto] [main] o.thymeleaf.templatemode.TemplateMode    : [THYMELEAF][main] Unknown Template Mode 'HTML5'. Must be one of: 'HTML', 'XML', 'TEXT', 'JAVASCRIPT', 'CSS', 'RAW'. Using default Template Mode 'HTML'.
+2024-06-07T19:40:30.610+02:00  INFO 15484 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-06-07T19:40:30.620+02:00  INFO 15484 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Started ProyectoApplication in 4.79 seconds (process running for 5.434)
+2024-06-07T19:40:32.636+02:00  INFO 15484 --- [Proyecto] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-07T19:40:32.636+02:00  INFO 15484 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-07T19:40:32.637+02:00  INFO 15484 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-07T19:40:50.950+02:00  INFO 15484 --- [Proyecto] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:40:50.952+02:00  INFO 15484 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-07T19:40:50.958+02:00  INFO 15484 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-07T19:40:58.680+02:00  INFO 8972 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Starting ProyectoApplication using Java 17.0.9 with PID 8972 (C:\Users\Joseluisct\Desktop\Proyecto\target\classes started by Joseluisct in C:\Users\Joseluisct\Desktop\Proyecto)
+2024-06-07T19:40:58.683+02:00  INFO 8972 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-07T19:40:59.443+02:00  INFO 8972 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-07T19:40:59.510+02:00  INFO 8972 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interface.
+2024-06-07T19:40:59.982+02:00  INFO 8972 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-07T19:40:59.992+02:00  INFO 8972 --- [Proyecto] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-07T19:40:59.993+02:00  INFO 8972 --- [Proyecto] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-07T19:41:00.061+02:00  INFO 8972 --- [Proyecto] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-07T19:41:00.061+02:00  INFO 8972 --- [Proyecto] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1145 ms
+2024-06-07T19:41:00.174+02:00  INFO 8972 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-07T19:41:00.317+02:00  INFO 8972 --- [Proyecto] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@42a0786f
+2024-06-07T19:41:00.319+02:00  INFO 8972 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-07T19:41:00.356+02:00  INFO 8972 --- [Proyecto] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-07T19:41:00.424+02:00  INFO 8972 --- [Proyecto] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-07T19:41:00.463+02:00  INFO 8972 --- [Proyecto] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-07T19:41:00.724+02:00  INFO 8972 --- [Proyecto] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-07T19:41:00.805+02:00  WARN 8972 --- [Proyecto] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-07T19:41:01.659+02:00  INFO 8972 --- [Proyecto] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-07T19:41:01.662+02:00  INFO 8972 --- [Proyecto] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:41:01.978+02:00  INFO 8972 --- [Proyecto] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-06-07T19:41:02.200+02:00  WARN 8972 --- [Proyecto] [main] o.thymeleaf.templatemode.TemplateMode    : [THYMELEAF][main] Unknown Template Mode 'HTML5'. Must be one of: 'HTML', 'XML', 'TEXT', 'JAVASCRIPT', 'CSS', 'RAW'. Using default Template Mode 'HTML'.
+2024-06-07T19:41:02.350+02:00  INFO 8972 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-06-07T19:41:02.358+02:00  INFO 8972 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Started ProyectoApplication in 4.123 seconds (process running for 4.762)
+2024-06-07T19:41:08.203+02:00  INFO 8972 --- [Proyecto] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-07T19:41:08.203+02:00  INFO 8972 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-07T19:41:08.204+02:00  INFO 8972 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-07T19:46:13.914+02:00  INFO 8972 --- [Proyecto] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:46:13.917+02:00  INFO 8972 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-07T19:46:13.924+02:00  INFO 8972 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-07T19:46:19.971+02:00  INFO 9064 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Starting ProyectoApplication using Java 17.0.9 with PID 9064 (C:\Users\Joseluisct\Desktop\Proyecto\target\classes started by Joseluisct in C:\Users\Joseluisct\Desktop\Proyecto)
+2024-06-07T19:46:19.974+02:00  INFO 9064 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-07T19:46:20.758+02:00  INFO 9064 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-07T19:46:20.820+02:00  INFO 9064 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
+2024-06-07T19:46:21.285+02:00  INFO 9064 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-07T19:46:21.296+02:00  INFO 9064 --- [Proyecto] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-07T19:46:21.297+02:00  INFO 9064 --- [Proyecto] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-07T19:46:21.360+02:00  INFO 9064 --- [Proyecto] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-07T19:46:21.361+02:00  INFO 9064 --- [Proyecto] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1150 ms
+2024-06-07T19:46:21.484+02:00  INFO 9064 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-07T19:46:21.625+02:00  INFO 9064 --- [Proyecto] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78c74647
+2024-06-07T19:46:21.627+02:00  INFO 9064 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-07T19:46:21.663+02:00  INFO 9064 --- [Proyecto] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-07T19:46:21.729+02:00  INFO 9064 --- [Proyecto] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-07T19:46:21.768+02:00  INFO 9064 --- [Proyecto] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-07T19:46:22.023+02:00  INFO 9064 --- [Proyecto] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-07T19:46:22.106+02:00  WARN 9064 --- [Proyecto] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-07T19:46:22.964+02:00  INFO 9064 --- [Proyecto] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-07T19:46:22.967+02:00  INFO 9064 --- [Proyecto] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:46:23.284+02:00  INFO 9064 --- [Proyecto] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-06-07T19:46:23.490+02:00  WARN 9064 --- [Proyecto] [main] o.thymeleaf.templatemode.TemplateMode    : [THYMELEAF][main] Unknown Template Mode 'HTML5'. Must be one of: 'HTML', 'XML', 'TEXT', 'JAVASCRIPT', 'CSS', 'RAW'. Using default Template Mode 'HTML'.
+2024-06-07T19:46:23.629+02:00  INFO 9064 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-06-07T19:46:23.637+02:00  INFO 9064 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Started ProyectoApplication in 4.115 seconds (process running for 4.811)
+2024-06-07T19:46:26.387+02:00  INFO 9064 --- [Proyecto] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-07T19:46:26.388+02:00  INFO 9064 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-07T19:46:26.389+02:00  INFO 9064 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-07T19:46:56.043+02:00  INFO 9064 --- [Proyecto] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:46:56.045+02:00  INFO 9064 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-07T19:46:56.051+02:00  INFO 9064 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-07T19:46:59.797+02:00  INFO 7136 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Starting ProyectoApplication using Java 17.0.9 with PID 7136 (C:\Users\Joseluisct\Desktop\Proyecto\target\classes started by Joseluisct in C:\Users\Joseluisct\Desktop\Proyecto)
+2024-06-07T19:46:59.800+02:00  INFO 7136 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-07T19:47:00.602+02:00  INFO 7136 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-07T19:47:00.666+02:00  INFO 7136 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 1 JPA repository interface.
+2024-06-07T19:47:01.132+02:00  INFO 7136 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-07T19:47:01.143+02:00  INFO 7136 --- [Proyecto] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-07T19:47:01.143+02:00  INFO 7136 --- [Proyecto] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-07T19:47:01.209+02:00  INFO 7136 --- [Proyecto] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-07T19:47:01.210+02:00  INFO 7136 --- [Proyecto] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1144 ms
+2024-06-07T19:47:01.326+02:00  INFO 7136 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-07T19:47:01.466+02:00  INFO 7136 --- [Proyecto] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@46bb0bdf
+2024-06-07T19:47:01.468+02:00  INFO 7136 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-07T19:47:01.503+02:00  INFO 7136 --- [Proyecto] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-07T19:47:01.571+02:00  INFO 7136 --- [Proyecto] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-07T19:47:01.608+02:00  INFO 7136 --- [Proyecto] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-07T19:47:01.855+02:00  INFO 7136 --- [Proyecto] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-07T19:47:01.929+02:00  WARN 7136 --- [Proyecto] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-07T19:47:02.754+02:00  INFO 7136 --- [Proyecto] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-07T19:47:02.757+02:00  INFO 7136 --- [Proyecto] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T19:47:03.079+02:00  INFO 7136 --- [Proyecto] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-06-07T19:47:03.286+02:00  WARN 7136 --- [Proyecto] [main] o.thymeleaf.templatemode.TemplateMode    : [THYMELEAF][main] Unknown Template Mode 'HTML5'. Must be one of: 'HTML', 'XML', 'TEXT', 'JAVASCRIPT', 'CSS', 'RAW'. Using default Template Mode 'HTML'.
+2024-06-07T19:47:03.426+02:00  INFO 7136 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-06-07T19:47:03.436+02:00  INFO 7136 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Started ProyectoApplication in 4.055 seconds (process running for 4.673)
+2024-06-07T19:47:12.148+02:00  INFO 7136 --- [Proyecto] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-07T19:47:12.148+02:00  INFO 7136 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-07T19:47:12.149+02:00  INFO 7136 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-06-07T20:00:53.768+02:00  INFO 7136 --- [Proyecto] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T20:00:53.770+02:00  INFO 7136 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-07T20:00:53.777+02:00  INFO 7136 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-07T20:01:31.523+02:00  INFO 3716 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Starting ProyectoApplication using Java 17.0.9 with PID 3716 (C:\Users\Joseluisct\Desktop\Proyecto\target\classes started by Joseluisct in C:\Users\Joseluisct\Desktop\Proyecto)
+2024-06-07T20:01:31.526+02:00  INFO 3716 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-07T20:01:32.289+02:00  INFO 3716 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-07T20:01:32.346+02:00  INFO 3716 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 1 JPA repository interface.
+2024-06-07T20:01:32.811+02:00  INFO 3716 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-07T20:01:32.822+02:00  INFO 3716 --- [Proyecto] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-07T20:01:32.823+02:00  INFO 3716 --- [Proyecto] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-07T20:01:32.896+02:00  INFO 3716 --- [Proyecto] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-07T20:01:32.896+02:00  INFO 3716 --- [Proyecto] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1130 ms
+2024-06-07T20:01:33.016+02:00  INFO 3716 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-07T20:01:33.154+02:00  INFO 3716 --- [Proyecto] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@477523ba
+2024-06-07T20:01:33.156+02:00  INFO 3716 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-07T20:01:33.191+02:00  INFO 3716 --- [Proyecto] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-07T20:01:33.263+02:00  INFO 3716 --- [Proyecto] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-07T20:01:33.301+02:00  INFO 3716 --- [Proyecto] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-07T20:01:33.552+02:00  INFO 3716 --- [Proyecto] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-07T20:01:33.629+02:00  WARN 3716 --- [Proyecto] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-07T20:01:34.537+02:00  INFO 3716 --- [Proyecto] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-07T20:01:34.540+02:00  INFO 3716 --- [Proyecto] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T20:01:34.863+02:00  INFO 3716 --- [Proyecto] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-06-07T20:01:35.065+02:00  WARN 3716 --- [Proyecto] [main] o.thymeleaf.templatemode.TemplateMode    : [THYMELEAF][main] Unknown Template Mode 'HTML5'. Must be one of: 'HTML', 'XML', 'TEXT', 'JAVASCRIPT', 'CSS', 'RAW'. Using default Template Mode 'HTML'.
+2024-06-07T20:01:35.213+02:00  INFO 3716 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-06-07T20:01:35.221+02:00  INFO 3716 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Started ProyectoApplication in 4.152 seconds (process running for 4.818)
+2024-06-07T20:01:40.016+02:00  INFO 3716 --- [Proyecto] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-07T20:01:40.016+02:00  INFO 3716 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-07T20:01:40.017+02:00  INFO 3716 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-07T20:03:20.970+02:00  INFO 3716 --- [Proyecto] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T20:03:20.973+02:00  INFO 3716 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-07T20:03:20.979+02:00  INFO 3716 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-07T20:03:24.741+02:00  INFO 6908 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Starting ProyectoApplication using Java 17.0.9 with PID 6908 (C:\Users\Joseluisct\Desktop\Proyecto\target\classes started by Joseluisct in C:\Users\Joseluisct\Desktop\Proyecto)
+2024-06-07T20:03:24.744+02:00  INFO 6908 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-07T20:03:25.557+02:00  INFO 6908 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-07T20:03:25.636+02:00  INFO 6908 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 1 JPA repository interface.
+2024-06-07T20:03:26.091+02:00  INFO 6908 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-07T20:03:26.109+02:00  INFO 6908 --- [Proyecto] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-07T20:03:26.109+02:00  INFO 6908 --- [Proyecto] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-07T20:03:26.175+02:00  INFO 6908 --- [Proyecto] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-07T20:03:26.176+02:00  INFO 6908 --- [Proyecto] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1190 ms
+2024-06-07T20:03:26.331+02:00  INFO 6908 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-07T20:03:26.472+02:00  INFO 6908 --- [Proyecto] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@629075f4
+2024-06-07T20:03:26.475+02:00  INFO 6908 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-07T20:03:26.515+02:00  INFO 6908 --- [Proyecto] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-07T20:03:26.591+02:00  INFO 6908 --- [Proyecto] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-07T20:03:26.632+02:00  INFO 6908 --- [Proyecto] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-07T20:03:26.886+02:00  INFO 6908 --- [Proyecto] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-07T20:03:26.960+02:00  WARN 6908 --- [Proyecto] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-07T20:03:27.793+02:00  INFO 6908 --- [Proyecto] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-07T20:03:27.796+02:00  INFO 6908 --- [Proyecto] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T20:03:28.110+02:00  INFO 6908 --- [Proyecto] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-06-07T20:03:28.331+02:00  WARN 6908 --- [Proyecto] [main] o.thymeleaf.templatemode.TemplateMode    : [THYMELEAF][main] Unknown Template Mode 'HTML5'. Must be one of: 'HTML', 'XML', 'TEXT', 'JAVASCRIPT', 'CSS', 'RAW'. Using default Template Mode 'HTML'.
+2024-06-07T20:03:28.472+02:00  INFO 6908 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-06-07T20:03:28.481+02:00  INFO 6908 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Started ProyectoApplication in 4.247 seconds (process running for 4.914)
+2024-06-07T20:03:31.306+02:00  INFO 6908 --- [Proyecto] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-07T20:03:31.306+02:00  INFO 6908 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-07T20:03:31.307+02:00  INFO 6908 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-07T20:05:06.383+02:00  INFO 6908 --- [Proyecto] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T20:05:06.385+02:00  INFO 6908 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-07T20:05:06.390+02:00  INFO 6908 --- [Proyecto] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-07T20:05:09.976+02:00  INFO 17988 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Starting ProyectoApplication using Java 17.0.9 with PID 17988 (C:\Users\Joseluisct\Desktop\Proyecto\target\classes started by Joseluisct in C:\Users\Joseluisct\Desktop\Proyecto)
+2024-06-07T20:05:09.979+02:00  INFO 17988 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-07T20:05:10.748+02:00  INFO 17988 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-07T20:05:10.811+02:00  INFO 17988 --- [Proyecto] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interface.
+2024-06-07T20:05:11.283+02:00  INFO 17988 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-07T20:05:11.294+02:00  INFO 17988 --- [Proyecto] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-07T20:05:11.294+02:00  INFO 17988 --- [Proyecto] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-07T20:05:11.358+02:00  INFO 17988 --- [Proyecto] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-07T20:05:11.358+02:00  INFO 17988 --- [Proyecto] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1136 ms
+2024-06-07T20:05:11.477+02:00  INFO 17988 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-07T20:05:11.622+02:00  INFO 17988 --- [Proyecto] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@42a0786f
+2024-06-07T20:05:11.624+02:00  INFO 17988 --- [Proyecto] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-07T20:05:11.662+02:00  INFO 17988 --- [Proyecto] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-07T20:05:11.733+02:00  INFO 17988 --- [Proyecto] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-07T20:05:11.773+02:00  INFO 17988 --- [Proyecto] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-07T20:05:12.031+02:00  INFO 17988 --- [Proyecto] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-07T20:05:12.108+02:00  WARN 17988 --- [Proyecto] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-07T20:05:13.021+02:00  INFO 17988 --- [Proyecto] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-07T20:05:13.025+02:00  INFO 17988 --- [Proyecto] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-07T20:05:13.354+02:00  INFO 17988 --- [Proyecto] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-06-07T20:05:13.567+02:00  WARN 17988 --- [Proyecto] [main] o.thymeleaf.templatemode.TemplateMode    : [THYMELEAF][main] Unknown Template Mode 'HTML5'. Must be one of: 'HTML', 'XML', 'TEXT', 'JAVASCRIPT', 'CSS', 'RAW'. Using default Template Mode 'HTML'.
+2024-06-07T20:05:13.711+02:00  INFO 17988 --- [Proyecto] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-06-07T20:05:13.719+02:00  INFO 17988 --- [Proyecto] [main] com.dam.Proyecto.ProyectoApplication     : Started ProyectoApplication in 4.162 seconds (process running for 4.797)
+2024-06-07T20:05:16.565+02:00  INFO 17988 --- [Proyecto] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-07T20:05:16.565+02:00  INFO 17988 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-07T20:05:16.566+02:00  INFO 17988 --- [Proyecto] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms

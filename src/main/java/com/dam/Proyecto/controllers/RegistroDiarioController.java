@@ -43,7 +43,7 @@ public class RegistroDiarioController {
     }
 
     @GetMapping("/mediciones")
-    public List<RegistroDiario> getRegistrosDiarios() {
+    public List<Object[]> getRegistrosDiarios() {
         return registroDiarioDao.getRegistrosDiarios();
     }
 

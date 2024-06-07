@@ -1,6 +1,6 @@
 // Call the dataTables jQuery plugin
 $(document).ready(function () {
-    //cargarNombresPluviometros()
+    cargarNombresPluviometros()
     cargarRegistros();
 
     //actualizarEmailUsuario();
@@ -12,7 +12,14 @@ $(document).ready(function () {
 function actualizarEmailUsuario() {
     document.getElementById('txt-email-usuario').outerHTML = localStorage.email;
 }
+function formatDate(dateString) {
+    const date = new Date(dateString);
+    const day = date.getDate();
+    const month = date.getMonth() + 1; // Los meses en JavaScript comienzan desde 0
+    const year = date.getFullYear();
 
+    return `${day}/${month}/${year}`;
+}
 async function cargarRegistros() {
     const request = await fetch('api/registroDiarios/mediciones', {
         method: 'GET',
@@ -23,17 +30,16 @@ async function cargarRegistros() {
     let listadoRegistrosHtml = '';
 
     for (let registro of registros) {
-        let botonEliminar = '<a href="#" onclick="eliminarRegistro(' + registro.id + ')" class="btn-danger btn-circle btn-sm"> <i class="fas fa-trash"></i> </a>'
-        let registroHtml = '<tr><td>' + registro.id + '</td> <td>' + registro.fecha + '</td> <td>'
-            + registro.pluviometroId + '</td> <td>'
-            + registro.volumenLluvia + '</td> <td> ' + botonEliminar + ' </td></tr>';
+        let botonEliminar = '<a href="#" onclick="eliminarRegistro(' + registro[0] + ')" class="btn-danger btn-circle btn-sm"> <i class="fas fa-trash"></i> </a>'
+        let registroHtml = '<tr><td>' + registro[0] + '</td> <td>' + formatDate(registro[1])+ '</td> <td>'
+            + registro[2] + '</td> <td>'
+            + registro[3] + '</td> <td> ' + botonEliminar + ' </td></tr>';
         listadoRegistrosHtml += registroHtml;
     }
 
     document.querySelector('#registros tbody').outerHTML = listadoRegistrosHtml;
     $('#registros').DataTable();
 }
-
 // Funcion para devolver el headers
 function getHeaders() {
     return {
