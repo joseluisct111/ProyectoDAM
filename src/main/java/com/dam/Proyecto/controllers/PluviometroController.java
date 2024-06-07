@@ -56,10 +56,6 @@ public class PluviometroController {
         pluviometroDao.eliminar(id);
     }
 
-    @GetMapping("/api/pluviometros/years")
-    public List<Integer> getYears() {
-        return registroDiarioDao.getYears();
-    }
 
     @GetMapping("/api/pluviometros/lluviaPorMes")
     public List<Double> getLluviaPorMes(@RequestParam Long pluviometroId, @RequestParam Integer year) {

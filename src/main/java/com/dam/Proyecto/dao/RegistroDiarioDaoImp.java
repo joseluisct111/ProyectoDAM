@@ -8,6 +8,10 @@ import jakarta.persistence.TypedQuery;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.math.BigDecimal;
+import java.time.Month;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Repository
@@ -50,11 +54,6 @@ public class RegistroDiarioDaoImp implements RegistroDiarioDao {
     }
 
     @Override
-    public List<Integer> getYears() {
-        return null;
-    }
-
-    @Override
     public List<Double> getLluviaPorMes(Long pluviometroId, Integer year) {
         return null;
     }
@@ -68,4 +67,30 @@ public class RegistroDiarioDaoImp implements RegistroDiarioDao {
             return null;
         }
     }
+
+    @Override
+    public List<Double> getVolumenesLluviaPorMes(int year) {
+        String query = "SELECT MONTH(r.fecha), SUM(r.volumenLluvia) FROM RegistroDiario r WHERE YEAR(r.fecha) = :year GROUP BY MONTH(r.fecha)";
+        List<Object[]> results = entityManager.createQuery(query)
+                .setParameter("year", year)
+                .getResultList();
+
+        // Inicializar un array con 12 ceros
+        Double[] volumenes = new Double[12];
+        Arrays.fill(volumenes, 0.0);
+
+        // Llenar el array con los resultados de la consulta
+        for (Object[] result : results) {
+            int month = (int) result[0];
+            BigDecimal sum = (BigDecimal) result[1];
+            volumenes[month - 1] = sum.doubleValue();
+        }
+
+        System.out.println(Arrays.toString(volumenes));
+        return Arrays.asList(volumenes);
+    }
+
+
+    // Otros métodos implementados
 }
+

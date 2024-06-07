@@ -9,44 +9,16 @@
     <title>Title</title>
 </head>
 <body>
-    <div class="container-fluid" layout:fragment="page-content">
-        <h1 th:text="${titulo}"></h1>
-
-        <table style="margin-left: auto; margin-right: auto;">
-            <tr>
-                <td colspan="3" align="center"><b>Elige Un Municipio</b></td>
-            </tr>
-            <tr>
-                <td><a class="btn btn-primary btn-user btn-block"
-                       onclick="loadIframe('murcia-id30030')">Murcia</a></td>
-                <td><a class="btn btn-primary btn-user btn-block" onclick="loadIframe('cartagena-id30016')">Cartagena</a>
-                </td>
-                <td><a class="btn btn-primary btn-user btn-block"
-                       onclick="loadIframe('alacant-alicante-id03014?')">Alicante</a></td>
-            </tr>
-            <tr>
-                <td><a class="btn btn-primary btn-user btn-block"
-                       onclick="loadIframe('bullas-id30012')">Bullas</a></td>
-                <td><a class="btn btn-primary btn-user btn-block"
-                       onclick="loadIframe('nerpio-id02055?')">Nerpio</a></td>
-                <td><a class="btn btn-primary btn-user btn-block" onclick="loadIframe('register')">Orihuela</a>
-                </td>
-            </tr>
-
-        </table>
-
-        <hr> <!-- Línea separadora -->
-
-        <iframe name="iframe_aemet_id33044" width="100%" height="200px" tabindex="0" id="iframe_aemet_id33044"
-                frameborder="0" scrolling="no"></iframe>
-
+<div class="container-fluid" layout:fragment="page-content">
+    <div class="row">
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Numero de Pluviometros</div>
+                                Numero de Pluviometros
+                            </div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800" id="pluviometros-count">0</div>
                         </div>
                         <div class="col-auto">
@@ -56,48 +28,112 @@
                 </div>
             </div>
         </div>
-    </div>
+        <div class="col-xl-6 col-md-6 mb-4 d-flex justify-content-center">
+            <table style="margin-left: auto; margin-right: auto;">
+                <tr>
+                    <td colspan="3" align="center"><b>Municipios</b></td>
+                </tr>
+                <tr>
+                    <td><a class="btn btn-primary btn-user btn-block" onclick="loadIframe('murcia-id30030')">Murcia</a>
+                    </td>
+                    <td><a class="btn btn-primary btn-user btn-block" onclick="loadIframe('cartagena-id30016')">Cartagena</a>
+                    </td>
+                    <td><a class="btn btn-primary btn-user btn-block" onclick="loadIframe('alacant-alicante-id03014?')">Alicante</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a class="btn btn-primary btn-user btn-block" onclick="loadIframe('bullas-id30012')">Bullas</a>
+                    </td>
+                    <td><a class="btn btn-primary btn-user btn-block" onclick="loadIframe('nerpio-id02055?')">Nerpio</a>
+                    </td>
+                    <td><a class="btn btn-primary btn-user btn-block" onclick="loadIframe('register')">Orihuela</a></td>
+                </tr>
+            </table>
+        </div>
 
     </div>
+    <iframe id="iframe_aemet_id33044" style="width: 100%; height: 200px; border: none;"></iframe>
+    <div class="form-group">
+        <label for="yearSelect">Selecciona el Año:</label>
+        <select class="form-control" id="yearSelect" onchange="updateChart()">
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+        </select>
+    </div>
+    <div id="chart_div" style="width: 100%; height: 300px;"></div>
+
+
     <!--OTRO SCRIPTS PARA PAGINAS-->
-    <th:block layout:fragment="page-scripts">
-        <!--<script src="js/comunes.js"></script> -->
-       <!-- <script src="//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js"></script>
-        <script src="//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js"></script> -->
-        <script>
-
-
-            function loadIframe(municipio) {
-                var iframe = document.getElementById('iframe_aemet_id33044');
-                iframe.src = 'https://www.aemet.es/es/eltiempo/prediccion/municipios/mostrarwidget/' + municipio;
-
-
-            }
-            async function cargarNumeroPluviometros() {
-                try {
-                    const response = await fetch('api/pluviometros/count', {
-                        method: 'GET',
-                        headers: {
-                            'Accept': 'application/json',
-                            'Content-Type': 'application/json',
-                            'Authorization': sessionStorage.token
-                        }
-                    });
-                    const data = await response.json();
-                    alert('Número de pluviómetros:' + data);
-                    document.getElementById('pluviometros-count').textContent = data;
-                } catch (error) {
-                    console.error('Error al cargar el número de pluviómetros:', error);
-                }
-            }
-
-            window.onload = function () {
-                alert('La página se ha cargado correctamente.'); // Verifica si la página se ha cargado correctamente
-                loadIframe('murcia-id30030');
-                cargarNumeroPluviometros();
-            }
-
-        </script>
-    </th:block>
+</div>
 </body>
+<th:block layout:fragment="page-scripts">
+    <script src="js/comunes.js"></script>
+    <script src="js/inicio.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages': ['corechart', 'bar']});
+        google.charts.setOnLoadCallback(() => updateChart());
+
+        function updateChart() {
+            const year = document.getElementById('yearSelect').value;
+            drawStuff(year);
+        }
+
+        function drawStuff(year) {
+            var chartDiv = document.getElementById('chart_div');
+
+            fetch(`/api/registroDiarios/volumen-lluvia?year=${year}`, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                    'Authorization': sessionStorage.token
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    const dataArray = [
+                        ['Mes', 'Acumulada (l/m²)'],
+                        ['Ene', data[0]],
+                        ['Feb', data[1]],
+                        ['Mar', data[2]],
+                        ['Abr', data[3]],
+                        ['May', data[4]],
+                        ['Jun', data[5]],
+                        ['Jul', data[6]],
+                        ['Ago', data[7]],
+                        ['Sep', data[8]],
+                        ['Oct', data[9]],
+                        ['Nov', data[10]],
+                        ['Dic', data[11]]
+                    ];
+
+                    var googleData = google.visualization.arrayToDataTable(dataArray);
+
+                    var materialOptions = {
+                        width: 900,
+                        chart: {
+                            title: 'Historico de lluvias',
+                            subtitle: 'Volumen Acumulado Total'
+                        },
+                        series: {
+                            0: {axis: 'distance'},
+                            1: {axis: 'brightness'}
+                        },
+                        axes: {
+                            y: {
+                                distance: {label: 'l/m²'},
+                                brightness: {side: 'right', label: 'apparent magnitude'}
+                            }
+                        }
+                    };
+
+                    var materialChart = new google.charts.Bar(chartDiv);
+                    materialChart.draw(googleData, google.charts.Bar.convertOptions(materialOptions));
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</th:block>
 </html>

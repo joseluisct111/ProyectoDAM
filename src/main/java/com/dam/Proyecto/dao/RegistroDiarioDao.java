@@ -15,10 +15,12 @@ public interface RegistroDiarioDao {
 
     RegistroDiario getRegistroDiario(Long id);
 
-    List<Integer> getYears();
+
 
     List<Double> getLluviaPorMes(Long pluviometroId, Integer year);
 
     Pluviometro obtenerPorId(int id);
+
+    List<Double> getVolumenesLluviaPorMes(int year);
 }
 

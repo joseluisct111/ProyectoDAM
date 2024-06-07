@@ -8,6 +8,8 @@ import com.dam.Proyecto.util.JWTUtil;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -94,6 +96,22 @@ public class RegistroDiarioController {
             return "Error al procesar el archivo.";
         }
     }
+
+    @GetMapping("/volumen-lluvia")
+    public ResponseEntity<?> getVolumenLluviaPorMes(@RequestParam int year) {
+        try {
+            // Obtener los datos del volumen de lluvia por mes de tu base de datos
+            List<Double> volumenesLluviaPorMes = registroDiarioDao.getVolumenesLluviaPorMes(year);
+
+            // Devolver los datos como respuesta
+            return ResponseEntity.ok(volumenesLluviaPorMes);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al obtener los datos del volumen de lluvia por mes.");
+        }
+    }
+
+
 
 
 

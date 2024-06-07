@@ -8,6 +8,7 @@ function actualizarEmailUsuario() {
         if (elementoEmailUsuario) {
             // Asignar el contenido del localStorage al elemento
             elementoEmailUsuario.textContent = sessionStorage.email;
+            alert(sessionStorage.email);
         } else {
             console.error('Elemento con ID "txt-email-usuario" no encontrado.');
         }
