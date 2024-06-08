@@ -9,6 +9,10 @@ function actualizarEmailUsuario() {
             // Asignar el contenido del localStorage al elemento
             elementoEmailUsuario.textContent = sessionStorage.email;
 
+            let esAdministrador = sessionStorage.getItem('administrador') === 'true';
+            document.getElementById('menuGestionUsuarios').style.display = esAdministrador ? 'block' : 'none';
+            document.getElementById('labelusuario').style.display = esAdministrador ? 'block' : 'none';
+            document.getElementById('barrausuario').style.display = esAdministrador ? 'block' : 'none';
         } else {
             console.error('Elemento con ID "txt-email-usuario" no encontrado.');
         }
@@ -17,12 +21,18 @@ function actualizarEmailUsuario() {
     }
 }
 
+window.onload = function () {
+
+}
+
 // Llamar a la función al cargar la página
-window.onload = function() {
+window.onload = function () {
 
     actualizarEmailUsuario();
 
+
 };
+
 // Definir la función para cerrar sesión y borrar los datos del localStorage
 function cerrarSesion() {
     // Eliminar los datos guardados del usuario en localStorage
@@ -31,6 +41,7 @@ function cerrarSesion() {
     // Redirigir a la página de inicio de sesión u otra página relevante
     window.location.href = '/';
 }
+
 let chart;
 
 

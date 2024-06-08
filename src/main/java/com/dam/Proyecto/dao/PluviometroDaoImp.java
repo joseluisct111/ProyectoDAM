@@ -17,10 +17,11 @@ public class PluviometroDaoImp implements PluviometroDao {
     private EntityManager entityManager;
 
     @Override
-    public List getPluviometros() {
-        String query = "FROM Pluviometro ";
-        return entityManager.createQuery(query).getResultList();
+    public List<Pluviometro> getPluviometros() {
+        String query = "FROM Pluviometro WHERE ";
+        return entityManager.createQuery(query, Pluviometro.class).getResultList();
     }
+
 
     @Override
     public void eliminar(Long id) {
@@ -40,11 +41,11 @@ public class PluviometroDaoImp implements PluviometroDao {
 }
     @Override
     public void registrar(Pluviometro pluviometro) {
-        entityManager.persist(pluviometro);
+        entityManager.merge(pluviometro);
     }
 
     @Override
-    public Pluviometro getPluviometro(Long id) {
+    public Pluviometro getPluviometro(int id) {
         return entityManager.find(Pluviometro.class, id);
     }
     @Override

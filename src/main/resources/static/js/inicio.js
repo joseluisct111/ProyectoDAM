@@ -15,7 +15,6 @@ async function cargarNumeroPluviometros() {
             }
         });
         const data = await response.json();
-        alert('Número de pluviómetros: ' + data);
         document.getElementById('pluviometros-count').textContent = data;
     } catch (error) {
         console.error('Error al cargar el número de pluviómetros:', error);
@@ -23,9 +22,10 @@ async function cargarNumeroPluviometros() {
 }
 
 
+
 window.onload = function () {
-    alert('La página se ha cargado correctamente.'); // Verifica si la página se ha cargado correctamente
     actualizarEmailUsuario();
     loadIframe('murcia-id30030');
     cargarNumeroPluviometros();
+
 }

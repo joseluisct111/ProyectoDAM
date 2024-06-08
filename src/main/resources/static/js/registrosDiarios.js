@@ -26,9 +26,7 @@ async function cargarRegistros() {
         headers: getHeaders(),
     });
     const registros = await request.json();
-
     let listadoRegistrosHtml = '';
-
     for (let registro of registros) {
         let botonEliminar = '<a href="#" onclick="eliminarRegistro(' + registro[0] + ')" class="btn-danger btn-circle btn-sm"> <i class="fas fa-trash"></i> </a>'
         let registroHtml = '<tr><td>' + registro[0] + '</td> <td>' + formatDate(registro[1])+ '</td> <td>'
@@ -36,7 +34,6 @@ async function cargarRegistros() {
             + registro[3] + '</td> <td> ' + botonEliminar + ' </td></tr>';
         listadoRegistrosHtml += registroHtml;
     }
-
     document.querySelector('#registros tbody').outerHTML = listadoRegistrosHtml;
     $('#registros').DataTable();
 }

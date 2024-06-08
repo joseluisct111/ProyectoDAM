@@ -18,6 +18,14 @@ public class HomeController {
     public String pluviometro(Model model) {
         return "pluviometros";
     }
+    @GetMapping("/modificarpluvi")
+    public String modipluviometro(Model model) {
+        return "modifpluvi";
+    }
+    @GetMapping("/deposito")
+    public String deposito(Model model) {
+        return "depositos";
+    }
     @GetMapping("/mapa")
     public String mapa(Model model) {
         return "mapapluviometros";

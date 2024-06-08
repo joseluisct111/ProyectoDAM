@@ -22,7 +22,9 @@ async function cargarUsuarios() {
         let telefonoTexto = usuario.telefono ? usuario.telefono : '-';
         let usuariohtml = '<tr><td>' + usuario.id + '</td> <td>' + usuario.nombre + '</td> <td>'
             + usuario.email + '</td> <td>'
-            + telefonoTexto + '</td> <td> ' + botonEliminar + '&nbsp;&nbsp;&nbsp;' + botonEliminar1 + ' </td></tr>';
+            + telefonoTexto + '</td> <td> '
+            + usuario.administrador + '</td> <td> '
+            + botonEliminar + '&nbsp;&nbsp;&nbsp;' + botonEliminar1 + ' </td></tr>';
         listadoUsuariosHtml += usuariohtml;
     }
     document.querySelector('#usuarios tbody').outerHTML = listadoUsuariosHtml;

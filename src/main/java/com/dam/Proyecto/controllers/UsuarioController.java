@@ -7,6 +7,8 @@ import com.dam.Proyecto.util.JWTUtil;
 import de.mkammerer.argon2.Argon2;
 import de.mkammerer.argon2.Argon2Factory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +16,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class UsuarioController {
@@ -62,18 +66,18 @@ public class UsuarioController {
         return usuarioId != null;
     }
     @RequestMapping(value = "api/login",method = RequestMethod.POST )
-    public String login(@RequestBody Usuario usuario) {
-        Usuario loginUser = usuarioDao.Credenciales(usuario);
-        if (loginUser != null){
-
-            String tokenJwt;
-            tokenJwt = jwtUtil.create(loginUser.getId().toString(), loginUser.getEmail()   );
-
-            return tokenJwt ;
-        } else {
-            return "fail";
-        }
+public ResponseEntity<Map<String, Object>> login(@RequestBody Usuario usuario) {
+    Usuario loginUser = usuarioDao.Credenciales(usuario);
+    if (loginUser != null){
+        String tokenJwt = jwtUtil.create(loginUser.getId().toString(), loginUser.getEmail());
+        Map<String, Object> response = new HashMap<>();
+        response.put("token", tokenJwt);
+        response.put("administrador", loginUser.getAdministrador());
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    } else {
+        return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
     }
+}
     public Usuario editar() {
         Usuario usuario = new Usuario();
         usuario.setNombre("Juan");

@@ -1,9 +1,11 @@
 // Call the dataTables jQuery plugin
 $(document).ready(function () {
-
     cargarPluviometros();
-    //cargarNombresPluviometros()
 
+    // Agregar evento de cambio al checkbox
+    $('#chkMostrarInactivos').change(function () {
+        cargarPluviometros();
+    });
 });
 
 
@@ -13,15 +15,27 @@ async function cargarPluviometros() {
         method: 'GET',
         headers: getHeaders(),
     });
-    const pluviometros = await request.json();
+    let pluviometros = await request.json();
+
+    // Obtener el estado del checkbox
+    const mostrarInactivos = $('#chkMostrarInactivos').is(':checked');
+
+    // Filtrar los pluviometros si el checkbox no está marcado
+    if (!mostrarInactivos) {
+        pluviometros = pluviometros.filter(pluviometro => pluviometro.activo);
+    }
 
     let listadoPluviometrosHtml = '';
 
     for (let pluviometro of pluviometros) {
-        let botonEliminar = '<a href="#" onclick="eliminarPluviometro(' + pluviometro.id + ')" class="btn-danger btn-circle btn-sm"> <i class="fas fa-trash"></i> </a>'
+        let botonModificar = '<a href="/modificarpluvi?id=' + pluviometro.id + '" class="btn btn-warning btn-icon-split"> <span class="text">Modificar</span> <span class="icon text-white-50"> <i class="fas fa-edit"></i> </span> </a>';
+        let colorActivo = pluviometro.activo ? 'green' : 'red';
+
         let pluviometroHtml = '<tr><td>' + pluviometro.id + '</td> <td>' + pluviometro.nombre + '</td> <td>'
             + pluviometro.latitud + '</td> <td>'
-            + pluviometro.longitud + '</td> <td> ' + botonEliminar + ' </td></tr>';
+            + pluviometro.longitud + '</td> <td style="background-color: ' + colorActivo + '; color: white; font-weight: bold; text-align: center;"> '
+            + pluviometro.activo + '</td> <td> '
+            + botonModificar+ ' </td></tr>';
         listadoPluviometrosHtml += pluviometroHtml;
     }
     document.querySelector('#pluviometros tbody').outerHTML = listadoPluviometrosHtml;

@@ -10,34 +10,30 @@
 </head>
 
 <body id="page-top">
-
-
 <!-- Begin Page Content -->
 <div class="container-fluid" layout:fragment="page-content">
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Gestion Usuarios Pluviometria</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Gestion Pluviometros</h6>
+            <div>
+                <input type="checkbox" id="chkMostrarInactivos">
+                <label for="chkMostrarInactivos">Mostrar inactivos</label>
+            </div>
         </div>
-        <div class="text-right">
-            <button  id="exportPdf" >
-                <img src="img/xls.png" alt="Imprimir PDF">
-            </button>
-            <button id="exportXls" >
-                <img src="img/xls.png" alt="Imprimir XLS">
-            </button>
-        </div>
+
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="pluviometros" width="100%" cellspacing="0">
                     <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Latitud</th>
-                            <th>Longitud</th>
-                            <th>Acciones</th>
-                        </tr>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Latitud</th>
+                        <th>Longitud</th>
+                        <th>Activo</th>
+                        <th>Acciones</th>
+                    </tr>
                     </thead>
 
                     <tbody>
@@ -56,16 +52,6 @@
 
 <!--OTRO SCRIPTS PARA PAGINAS-->
 <th:block layout:fragment="page-scripts">
-    <script>
-        document.getElementById('exportPdf').addEventListener('click', function() {
-            window.location.href = '/export-pdf';
-        });
-    </script>
-    <script>
-        document.getElementById('exportXls').addEventListener('click', function() {
-            window.location.href = '/export-xls';
-        });
-    </script>
     <script src="js/comunes.js"></script>
     <script src="js/pluviometros.js"></script>
 </th:block>

@@ -14,7 +14,7 @@ public interface PluviometroDao {
 
     void registrar(Pluviometro pluviometro);
 
-    Pluviometro getPluviometro(Long id);
+    Pluviometro getPluviometro(int id);
 
     Long contarPluviometros();
 }

@@ -11,6 +11,7 @@ async function registrarUsuario() {
         apellido  : document.getElementById('txtApellidos').value,
         email: document.getElementById('txtEmail').value,
         password  : document.getElementById('txtPassword').value,
+        administrador: document.getElementById('chkAdministrador').checked
     };
 
     // Recoge el valor del campo de entrada 'Repetir Contraseña'
@@ -32,10 +33,6 @@ async function registrarUsuario() {
         },
         body: JSON.stringify(datos)
     });
-
-    // Una vez que la solicitud se ha completado, muestra una alerta al usuario indicando que el registro se ha realizado correctamente
-    alert("Prueba 1");
-
     // Redirige al usuario a la página de inicio de sesión
     window.location.href = '/inicio';
 }

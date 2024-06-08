@@ -2,13 +2,21 @@
 $(document).ready(function() {
     // on Ready
 });
+function validarCampos() {
+    let email = document.getElementById('txtEmail').value;
+    let password = document.getElementById('txtPassword').value;
 
+    if (!email || !password) {
+        alert('Por favor, rellena todos los campos.');
+    } else {
+        IniciarSesion();
+    }
+}
 async function IniciarSesion() {
     let datos = {
-
         email: document.getElementById('txtEmail').value,
-        password  : document.getElementById('txtPassword').value,
-       };
+        password: document.getElementById('txtPassword').value,
+    };
 
     const request = await fetch('/api/login', {
         method: 'POST',
@@ -19,11 +27,12 @@ async function IniciarSesion() {
         body: JSON.stringify(datos)
     });
 
-    const respuesta = await request.text();
+    const respuesta = await request.json();
 
-    if(respuesta != 'fail') {
-        sessionStorage.setItem('token', respuesta);
+    if(respuesta.mensaje != 'fail') {
+        sessionStorage.setItem('token', respuesta.token);
         sessionStorage.setItem('email', datos.email);
+        sessionStorage.setItem('administrador', respuesta.administrador); // Aquí se accede al valor de administrador desde la respuesta de la API
         window.location.href = '/inicio';
     } else {
         var mensaje = 'Usuario o contraseña incorrectos';
@@ -32,5 +41,4 @@ async function IniciarSesion() {
         document.title = titulo;
         alert(mensaje);
     }
-
 }

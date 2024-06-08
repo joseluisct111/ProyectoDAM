@@ -19,4 +19,7 @@ public class Pluviometro { // Cambio el nombre de la clase a "Pluviometro"
     private String latitud;
     @Getter @Setter @Column(name = "longitud") // Agrego una columna "longitud" como DECIMAL(11, 8) NOT NULL
     private String longitud;
+    @Getter @Setter
+    @Column(name = "activo") // Nuevo campo booleano "activo"
+    private boolean activo;
 }
